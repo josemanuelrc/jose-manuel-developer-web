@@ -1,0 +1,45 @@
+@import "./../../../../assets/themes/themes.scss";
+
+.selector {
+  position: relative;
+  display: inline-block;
+  width: 7rem;
+  height: 30px;
+  background-color: $white;
+  border-radius: 2rem;
+}
+
+.selector:hover .selector-content {
+  display: block; // Cuando se hace hover sobre el selector, se muestra la lista
+}
+
+.selector-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 7rem;
+}
+
+.selector-list {
+  margin-top: 0.5rem;
+  padding: 0.5rem 0rem;
+  background-color: $white;
+  border-radius: 0.8rem;
+}
+
+.selector-list a {
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.selector-content a:hover {
+  background-color: $grey-05;
+}
+
+.selector-btn {
+  display: inline-block;
+  padding: 6px 16px;
+  border: none;
+  cursor: pointer;
+}

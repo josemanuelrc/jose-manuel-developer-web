@@ -1,0 +1,83 @@
+@import "./../../../assets/themes/themes.scss";
+
+footer {
+}
+
+.footer-container {
+  padding: 1rem 2rem;
+  background-color: $d-secondary-color;
+}
+
+.footer-info-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 0.5rem;
+}
+
+.section {
+  //width: 16rem;
+}
+
+.acessibility-section {
+  width: 12rem;
+}
+
+.section-container {
+}
+
+.section-container a,
+h4 {
+  padding: 0.5rem 0rem;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub-footer-container {
+  padding: 0.5rem 2rem;
+  background-color: $grey-13;
+}
+
+.separator {
+  width: 0.2rem;
+  height: 200px;
+  background-color: $white;
+}
+
+h2 {
+  color: $white;
+}
+
+h3 {
+  margin: 1rem 0rem;
+  color: $white;
+}
+
+h4 {
+  margin: 0;
+  color: $white;
+}
+
+a {
+  display: block;
+  color: $white;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 1rem 2rem;
+  }
+  .footer-info-container {
+    grid-template-columns: auto auto;
+    transition: grid-template-columns 2s ease-in-out;
+  }
+}
+
+@media (max-width: 425px) {
+  .footer-info-container {
+    grid-template-columns: auto;
+    transition: grid-template-columns 2s ease-in-out;
+  }
+}

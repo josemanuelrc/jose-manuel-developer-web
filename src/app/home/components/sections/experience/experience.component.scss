@@ -1,0 +1,18 @@
+section#experience {
+  scroll-margin-top: 5rem;
+  padding: 0rem 5rem;
+}
+
+.experience {
+  padding-left: 2rem;
+}
+
+.description {
+  padding-left: 2rem;
+}
+
+@media (max-width: 768px) {
+  section#experience {
+    padding: 0rem 2rem;
+  }
+}

@@ -1,0 +1,111 @@
+<nav #navBar class="nav-bar">
+  <!-- NAVIGATION BAR TITTLE -->
+  <div class="nav-bar-title">
+    <a href="#">Menú</a>
+  </div>
+  <!-- NAVIGATION BAR LIST -->
+
+  <ul class="nav-bar-list">
+    <li class="nav-bar-li">
+      <a href="#">
+        <i class="fa-solid fa-house"></i>
+        Inicio
+      </a>
+    </li>
+    <li class="nav-bar-li">
+      <a href="#about-me">
+        <i class="fa-solid fa-circle-info"></i>
+        Sobre mí
+      </a>
+    </li>
+    <li class="nav-bar-li">
+      <a href="#experience">
+        <i class="fa-solid fa-briefcase"></i>
+        Experiencia
+      </a>
+    </li>
+    <li class="nav-bar-li">
+      <a href="#technologies">
+        <i class="fa-solid fa-code"></i>
+        Tecnologías
+      </a>
+    </li>
+    <li class="nav-bar-li">
+      <a href="#education">
+        <i class="fa-solid fa-book"></i>
+        Formación
+      </a>
+    </li>
+    <li class="nav-bar-li">
+      <a href="#curriculum">
+        <i class="fa-solid fa-clipboard"></i>
+        Currículum Vitae
+      </a>
+    </li>
+    <li class="nav-bar-li">
+      <a href="#contact">
+        <i class="fa-solid fa-message"></i>
+        Contacto
+      </a>
+    </li>
+  </ul>
+
+  <!-- NAVIGATION BUTTONS -->
+  <div class="nav-bar-buttons">
+    <!-- MENU BUTTON -->
+    <span class="menu-btn" (click)="toggleMenu()">
+      <i
+        [ngClass]="
+          isMenuOpen ? 'fa-solid fa-x fa-2x' : 'fa-solid fa-bars fa-2x'
+        "
+      ></i>
+    </span>
+  </div>
+</nav>
+<!-- NAVIGATION DROPDOWN LIST -->
+<div #navDropList class="nav-drop-list" [class.menu-dropdown]="isMenuOpen">
+  <ul>
+    <li>
+      <a href="#">
+        <i class="fa-solid fa-house"></i>
+        Inicio
+      </a>
+    </li>
+    <li>
+      <a href="#about-me" (click)="toggleMenu()">
+        <i class="fa-solid fa-circle-info"></i>
+        Sobre mí
+      </a>
+    </li>
+    <li>
+      <a href="#experience" (click)="toggleMenu()">
+        <i class="fa-solid fa-briefcase"></i>
+        Experiencia
+      </a>
+    </li>
+    <li>
+      <a href="#technologies" (click)="toggleMenu()">
+        <i class="fa-solid fa-code"></i>
+        Tecnologías
+      </a>
+    </li>
+    <li>
+      <a href="#education" (click)="toggleMenu()">
+        <i class="fa-solid fa-book"></i>
+        Formación
+      </a>
+    </li>
+    <li>
+      <a href="#curriculum" (click)="toggleMenu()">
+        <i class="fa-solid fa-clipboard"></i>
+        Currículum Vitae
+      </a>
+    </li>
+    <li>
+      <a href="#contact" (click)="toggleMenu()">
+        <i class="fa-solid fa-message"></i>
+        Contacto
+      </a>
+    </li>
+  </ul>
+</div>

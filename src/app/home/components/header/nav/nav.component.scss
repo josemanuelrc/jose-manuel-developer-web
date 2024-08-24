@@ -1,0 +1,101 @@
+@import "./../../../../../app/assets/themes/themes.scss";
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  padding: 0 2rem;
+}
+
+.nav-bar-title {
+  display: none;
+}
+
+.nav-bar-title a {
+  font-size: larger;
+}
+
+.nav-bar-list {
+  display: flex;
+  padding: 0;
+  height: 100%;
+}
+
+.nav-bar-li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-bar-buttons {
+  /* NOTHING */
+}
+
+ul {
+  list-style: none;
+}
+
+ul li:hover {
+  background-color: $d-primary-dark-color;
+  transition: 0.3s ease-in-out;
+}
+
+ul li a {
+  margin: 0.5rem;
+}
+
+ul li a i {
+  width: 20px;
+}
+
+a {
+  color: $white;
+  font-weight: bold;
+}
+
+.menu-btn {
+  color: white;
+}
+
+.nav-drop-list {
+  display: none;
+}
+
+/* Estilos para hacer que el menú sea responsive */
+@media (max-width: 900px) {
+  .nav-bar-title {
+    display: block;
+  }
+
+  .nav-bar-list {
+    display: none;
+  }
+
+  .menu-dropdown {
+    display: block;
+    background-color: $d-primary-color;
+  }
+
+  .menu-dropdown ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-dropdown ul li {
+    //display: block;
+    padding: 0.5rem;
+    border-top: 0.15rem solid white;
+  }
+}
+
+@media (min-width: 901px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .menu-dropdown {
+    display: none;
+  }
+}

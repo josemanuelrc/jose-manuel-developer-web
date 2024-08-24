@@ -1,0 +1,14 @@
+section#technologies {
+  scroll-margin-top: 5rem;
+  padding: 0rem 5rem;
+}
+
+.technologies {
+  padding: 0rem 2rem;
+}
+
+@media (max-width: 768px) {
+  section#technologies {
+    padding: 0rem 2rem;
+  }
+}

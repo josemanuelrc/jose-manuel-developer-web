@@ -1,0 +1,37 @@
+@import "./../../../../assets/themes/themes.scss";
+
+section#curriculum {
+  scroll-margin-top: 5rem;
+  padding: 0rem 5rem;
+}
+
+.curriculum {
+  padding: 0rem 2rem;
+}
+
+.btn-download {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: $d-primary-color;
+  border-radius: 25px;
+  border: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-download:hover {
+  transform: scale(1.02);
+}
+
+#link {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  section#curriculum {
+    padding: 0rem 2rem;
+  }
+}
