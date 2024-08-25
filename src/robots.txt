@@ -1,3 +1,2 @@
 User-agent: *
-Disallow:
 Sitemap: https://jose-manuel-developer-web.pages.dev/sitemap.xml
