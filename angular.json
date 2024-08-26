@@ -58,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "jose-manuel-developer-web:build:production"
+              "buildTarget": "jose-manuel-developer-web:build:production"
             },
             "development": {
-              "browserTarget": "jose-manuel-developer-web:build:development"
+              "buildTarget": "jose-manuel-developer-web:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -69,7 +69,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "jose-manuel-developer-web:build"
+            "buildTarget": "jose-manuel-developer-web:build"
           }
         },
         "test": {
