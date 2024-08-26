@@ -1,10 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  OnDestroy,
-  OnInit,
-  Output,
-} from '@angular/core';
+import { Component, EventEmitter, OnDestroy, OnInit, Output, inject } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Theme } from 'src/app/assets/themes/theme.interface';
 import { ThemeService } from 'src/app/services/theme.service';
@@ -16,12 +10,17 @@ import { ThemeService } from 'src/app/services/theme.service';
     standalone: true,
 })
 export class ThemeToggleSliderComponent implements OnInit, OnDestroy {
+  private themeService = inject(ThemeService);
+
   // Web Themes
   private theme: string = '';
   // Web Theme Subscription
   private themeSubscription: Subscription;
 
-  constructor(private themeService: ThemeService) {
+  /** Inserted by Angular inject() migration for backwards compatibility */
+  constructor(...args: unknown[]);
+
+  constructor() {
     this.themeSubscription = this.themeService
       .getTheme$()
       .subscribe((theme) => (this.theme = theme));

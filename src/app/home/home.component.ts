@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ThemeService } from '../services/theme.service';
 import { NgClass } from '@angular/common';
@@ -31,12 +31,17 @@ import { FooterComponent } from './components/footer/footer.component';
     ],
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  private themeService = inject(ThemeService);
+
   // Web Theme
   public theme: string = '';
   // Web Theme Subscription
   private themeSubscription: Subscription;
 
-  constructor(private themeService: ThemeService) {
+  /** Inserted by Angular inject() migration for backwards compatibility */
+  constructor(...args: unknown[]);
+
+  constructor() {
     this.themeSubscription = this.themeService
       .getTheme$()
       .subscribe((theme) => (this.theme = theme));
