@@ -3,11 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 /* COMPONENTS */
 
-import { HomeComponent } from './home/home.component';
+
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: '**', component: HomeComponent, pathMatch: 'full' },
+  { path: '', loadComponent: () => import('./home/home.component').then(m => m.HomeComponent), pathMatch: 'full' },
+  { path: '**', loadComponent: () => import('./home/home.component').then(m => m.HomeComponent), pathMatch: 'full' },
 ];
 
 @NgModule({
