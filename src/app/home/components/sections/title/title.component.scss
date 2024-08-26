@@ -5,6 +5,12 @@ section#home {
 .header-container {
   padding: 0rem 5rem;
   display: flex;
+  gap: 2rem;
+  img {
+    height: 25rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
