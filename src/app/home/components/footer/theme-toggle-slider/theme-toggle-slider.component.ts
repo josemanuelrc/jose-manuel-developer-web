@@ -10,9 +10,10 @@ import { Theme } from 'src/app/assets/themes/theme.interface';
 import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
-  selector: 'app-theme-toggle-slider',
-  templateUrl: './theme-toggle-slider.component.html',
-  styleUrls: ['./theme-toggle-slider.component.scss'],
+    selector: 'app-theme-toggle-slider',
+    templateUrl: './theme-toggle-slider.component.html',
+    styleUrls: ['./theme-toggle-slider.component.scss'],
+    standalone: true,
 })
 export class ThemeToggleSliderComponent implements OnInit, OnDestroy {
   // Web Themes

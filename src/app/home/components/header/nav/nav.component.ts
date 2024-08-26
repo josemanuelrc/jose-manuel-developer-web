@@ -5,11 +5,14 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { NgClass } from '@angular/common';
 
 @Component({
-  selector: 'app-nav',
-  templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss'],
+    selector: 'app-nav',
+    templateUrl: './nav.component.html',
+    styleUrls: ['./nav.component.scss'],
+    standalone: true,
+    imports: [NgClass],
 })
 export class NavComponent implements OnInit {
   @ViewChild('navDropList') navDropList: ElementRef | undefined;

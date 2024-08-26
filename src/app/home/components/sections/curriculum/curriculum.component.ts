@@ -1,9 +1,10 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-curriculum',
-  templateUrl: './curriculum.component.html',
-  styleUrls: ['./curriculum.component.scss'],
+    selector: 'app-curriculum',
+    templateUrl: './curriculum.component.html',
+    styleUrls: ['./curriculum.component.scss'],
+    standalone: true,
 })
 export class CurriculumComponent implements OnInit {
   @ViewChild('link', { static: false }) link: ElementRef | undefined;
