@@ -13,28 +13,28 @@ import { ContactComponent } from './components/sections/contact/contact.componen
 import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss'],
-    standalone: true,
-    imports: [
-        NgClass,
-        HeaderComponent,
-        TitleComponent,
-        AboutMeComponent,
-        ExperienceComponent,
-        TechnologiesComponent,
-        EducationComponent,
-        CurriculumComponent,
-        ContactComponent,
-        FooterComponent,
-    ],
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
+  standalone: true,
+  imports: [
+    NgClass,
+    HeaderComponent,
+    TitleComponent,
+    AboutMeComponent,
+    ExperienceComponent,
+    TechnologiesComponent,
+    EducationComponent,
+    CurriculumComponent,
+    ContactComponent,
+    FooterComponent,
+  ],
 })
 export class HomeComponent implements OnInit, OnDestroy {
   private themeService = inject(ThemeService);
 
   // Web Theme
-  public theme: string = '';
+  public theme = '';
   // Web Theme Subscription
   private themeSubscription: Subscription;
 
