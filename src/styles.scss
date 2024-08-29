@@ -8,8 +8,8 @@ html {
   scroll-behavior: smooth;
 }
 
-// body {
-// }
+//body {
+//}
 
 h1,
 h2,
@@ -19,15 +19,10 @@ h5,
 h6 {
   font-family: "PoiretOne", sans-serif;
   color: $d-primary-color;
-}
-
-h1::selection,
-h2::selection,
-h3::selection,
-h4::selection,
-h5::selection,
-h6::selection {
-  background: $grey-06;
+  &::selection {
+    color: $white;
+    background: $grey-06;
+  }
 }
 
 h1 {
@@ -59,31 +54,31 @@ h6 {
   font-size: 1rem;
 }
 
-p {
+p,
+strong,
+b {
+  color: $grey-14;
   font-family: "OpenSans", sans-serif;
-}
-
-p::selection {
-  color: $white;
-  background: $grey-06;
+  &::selection {
+    color: $white;
+    background: $grey-06;
+  }
 }
 
 button {
   color: $white;
   font-family: "PoiretOne", sans-serif;
-}
-
-button::selection {
-  background: $grey-06;
+  &::selection {
+    background: $grey-06;
+  }
 }
 
 a {
   font-size: 1.25rem;
   text-decoration: none;
   font-family: "PoiretOne", sans-serif;
-}
-
-a::selection {
-  color: $white;
-  background: $grey-06;
+  &::selection {
+    color: $white;
+    background: $grey-06;
+  }
 }

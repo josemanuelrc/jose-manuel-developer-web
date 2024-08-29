@@ -1,3 +1,5 @@
+@import "./../../../../assets/themes/themes.scss";
+
 section#home {
   background-image: "./../../../../assets/images/floral.png";
 }
@@ -10,6 +12,27 @@ section#home {
     height: 25rem;
     border-radius: 2rem;
     margin-top: 1rem;
+  }
+}
+.links {
+  display: flex;
+  gap: 1rem;
+}
+
+a {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3rem;
+  color: #fff;
+  background-color: $d-primary-color;
+  border-radius: 50%;
+  border: none;
+  transition: transform 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
   }
 }
 

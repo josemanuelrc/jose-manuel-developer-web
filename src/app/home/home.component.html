@@ -3,11 +3,21 @@
   <main>
     <app-title></app-title>
     <app-about-me></app-about-me>
-    <app-experience></app-experience>
-    <app-technologies></app-technologies>
-    <app-education></app-education>
-    <app-curriculum></app-curriculum>
-    <app-contact></app-contact>
+    @defer {
+      <app-experience></app-experience>
+    }
+    @defer {
+      <app-technologies></app-technologies>
+    }
+    @defer {
+      <app-education></app-education>
+    }
+    @defer {
+      <app-curriculum></app-curriculum>
+    }
+    @defer {
+      <app-contact></app-contact>
+    }
   </main>
   <app-footer></app-footer>
 </div>

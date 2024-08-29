@@ -1,15 +1,18 @@
 @import "./../assets/themes/themes.scss";
 
-//Tema Claro
-div.light-theme {
-  color: $black;
-  background-color: $white;
-  transition: background-color 0.5s ease;
+main {
+  background-color: $d-secondary-light-color;
 }
+// //Tema Claro
+// div.light-theme {
+//   color: $black;
+//   background-color: $white;
+//   transition: background-color 0.5s ease;
+// }
 
-// Tema Oscuro
-div.dark-theme {
-  color: $white;
-  background-color: $grey-13;
-  transition: background-color 0.5s ease;
-}
+// // Tema Oscuro
+// div.dark-theme {
+//   color: $white;
+//   background-color: $grey-13;
+//   transition: background-color 0.5s ease;
+// }
