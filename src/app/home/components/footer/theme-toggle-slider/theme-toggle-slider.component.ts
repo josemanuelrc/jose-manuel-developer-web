@@ -1,32 +1,27 @@
-import { Component, EventEmitter, OnDestroy, OnInit, Output, inject } from '@angular/core';
+import { Component, OnDestroy, inject } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Theme } from 'src/app/assets/themes/theme.interface';
 import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
-    selector: 'app-theme-toggle-slider',
-    templateUrl: './theme-toggle-slider.component.html',
-    styleUrls: ['./theme-toggle-slider.component.scss'],
-    standalone: true,
+  selector: 'app-theme-toggle-slider',
+  templateUrl: './theme-toggle-slider.component.html',
+  styleUrls: ['./theme-toggle-slider.component.scss'],
+  standalone: true,
 })
-export class ThemeToggleSliderComponent implements OnInit, OnDestroy {
+export class ThemeToggleSliderComponent implements OnDestroy {
   private themeService = inject(ThemeService);
 
   // Web Themes
-  private theme: string = '';
+  private theme = '';
   // Web Theme Subscription
   private themeSubscription: Subscription;
-
-  /** Inserted by Angular inject() migration for backwards compatibility */
-  constructor(...args: unknown[]);
 
   constructor() {
     this.themeSubscription = this.themeService
       .getTheme$()
       .subscribe((theme) => (this.theme = theme));
   }
-
-  ngOnInit(): void {}
 
   public changeTheme() {
     if (this.theme === Theme.LIGHT) {

@@ -57,7 +57,7 @@ h6 {
 p,
 strong,
 b {
-  color: $grey-14;
+  color: $grey-13;
   font-family: "OpenSans", sans-serif;
   &::selection {
     color: $white;
@@ -70,6 +70,9 @@ button {
   font-family: "PoiretOne", sans-serif;
   &::selection {
     background: $grey-06;
+  }
+  &:hover {
+    cursor: pointer;
   }
 }
 

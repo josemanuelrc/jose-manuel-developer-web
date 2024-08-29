@@ -1,28 +1,18 @@
-import {
-  Component,
-  ElementRef,
-  HostListener,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { NgClass } from '@angular/common';
 
 @Component({
-    selector: 'app-nav',
-    templateUrl: './nav.component.html',
-    styleUrls: ['./nav.component.scss'],
-    standalone: true,
-    imports: [NgClass],
+  selector: 'app-nav',
+  templateUrl: './nav.component.html',
+  styleUrls: ['./nav.component.scss'],
+  standalone: true,
+  imports: [NgClass],
 })
-export class NavComponent implements OnInit {
+export class NavComponent {
   @ViewChild('navDropList') navDropList: ElementRef | undefined;
   @ViewChild('navBar') navBar: ElementRef | undefined;
 
   isMenuOpen = false;
-
-  constructor() {}
-
-  ngOnInit() {}
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;

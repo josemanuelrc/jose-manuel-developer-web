@@ -1,17 +1,13 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
-    selector: 'app-curriculum',
-    templateUrl: './curriculum.component.html',
-    styleUrls: ['./curriculum.component.scss'],
-    standalone: true,
+  selector: 'app-curriculum',
+  templateUrl: './curriculum.component.html',
+  styleUrls: ['./curriculum.component.scss'],
+  standalone: true,
 })
-export class CurriculumComponent implements OnInit {
+export class CurriculumComponent {
   @ViewChild('link', { static: false }) link: ElementRef | undefined;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 
   downloadFile() {
     this.link?.nativeElement.click();

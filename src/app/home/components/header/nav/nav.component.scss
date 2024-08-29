@@ -55,7 +55,12 @@ a {
 }
 
 .menu-btn {
+  background: none;
+  border: none;
   color: white;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .nav-drop-list {

@@ -53,13 +53,14 @@
   <!-- NAVIGATION BUTTONS -->
   <div class="nav-bar-buttons">
     <!-- MENU BUTTON -->
-    <span class="menu-btn" (click)="toggleMenu()">
+    <button class="menu-btn" (click)="toggleMenu()">
       <i
         [ngClass]="
-          isMenuOpen ? 'fa-solid fa-x fa-2x' : 'fa-solid fa-bars fa-2x'
+          isMenuOpen ? 'fa-solid fa-x fa-2x' : 'fa-sharp fa-solid fa-bars fa-2x'
         "
-      ></i>
-    </span>
+      ></i
+      ><i class="fa-sharp fa-solid fa-bars"></i>
+    </button>
   </div>
 </nav>
 <!-- NAVIGATION DROPDOWN LIST -->
