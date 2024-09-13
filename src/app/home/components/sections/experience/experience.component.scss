@@ -1,6 +1,10 @@
+@import "../../../../assets/themes/themes.scss";
+
 section#experience {
   scroll-margin-top: 5rem;
-  padding: 0rem 5rem;
+  padding: 1.5rem 5rem;
+  background: $d-primary-dark-color;
+  opacity: 0.8;
 }
 
 .experience {
@@ -9,10 +13,14 @@ section#experience {
 
 .description {
   padding-left: 2rem;
+  p,
+  strong {
+    color: $white;
+  }
 }
 
 @media (max-width: 768px) {
   section#experience {
-    padding: 0rem 2rem;
+    padding: 1.5rem 2rem;
   }
 }

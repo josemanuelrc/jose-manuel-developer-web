@@ -5,7 +5,7 @@ footer {
 
 .footer-container {
   padding: 1rem 2rem;
-  background-color: $d-secondary-color;
+  background-color: $grey-14;
 }
 
 .footer-info-container {
@@ -37,7 +37,7 @@ h4 {
 
 .sub-footer-container {
   padding: 0.5rem 2rem;
-  background-color: $grey-13;
+  background-color: $grey-14;
 }
 
 .separator {
@@ -63,6 +63,7 @@ h4 {
 a {
   display: block;
   color: $white;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {

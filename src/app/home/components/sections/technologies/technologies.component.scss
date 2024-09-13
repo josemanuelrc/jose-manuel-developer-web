@@ -1,6 +1,13 @@
+@import "../../../../assets/themes/themes.scss";
+
 section#technologies {
   scroll-margin-top: 5rem;
-  padding: 0rem 5rem;
+  padding: 1.5rem 5rem;
+  background: linear-gradient(to bottom, $grey-02, $grey-03);
+  height: 30rem;
+  h3 {
+    color: $d-primary-dark-color;
+  }
 }
 
 .technologies {
@@ -9,6 +16,6 @@ section#technologies {
 
 @media (max-width: 768px) {
   section#technologies {
-    padding: 0rem 2rem;
+    padding: 1.5rem 2rem;
   }
 }

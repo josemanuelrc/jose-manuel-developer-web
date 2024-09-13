@@ -2,7 +2,11 @@
 
 section#curriculum {
   scroll-margin-top: 5rem;
-  padding: 0rem 5rem;
+  padding: 1.5rem 5rem;
+  background: $grey-13;
+  p {
+    color: $white;
+  }
 }
 
 .curriculum {
@@ -32,6 +36,6 @@ section#curriculum {
 
 @media (max-width: 768px) {
   section#curriculum {
-    padding: 0rem 2rem;
+    padding: 1.5rem 2rem;
   }
 }
