@@ -4,14 +4,14 @@ footer {
 }
 
 .footer-container {
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
   background-color: $grey-14;
 }
 
 .footer-info-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .section {
@@ -36,7 +36,7 @@ h4 {
 }
 
 .sub-footer-container {
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 3rem;
   background-color: $grey-14;
 }
 

@@ -2,10 +2,11 @@
 
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+
   align-items: center;
   height: 4rem;
-  padding: 0 2rem;
+  padding-right: 5rem;
 }
 
 .nav-bar-title {
@@ -67,8 +68,21 @@ a {
   display: none;
 }
 
-/* Estilos para hacer que el menú sea responsive */
-@media (max-width: 900px) {
+@media (min-width: 1025px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .menu-dropdown {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  nav {
+    justify-content: space-between;
+    padding: 0 5rem;
+  }
   .nav-bar-title {
     display: block;
   }
@@ -95,12 +109,8 @@ a {
   }
 }
 
-@media (min-width: 901px) {
-  .menu-btn {
-    display: none;
-  }
-
-  .menu-dropdown {
-    display: none;
+@media (max-width: 768px) {
+  nav {
+    padding: 0 2rem;
   }
 }
