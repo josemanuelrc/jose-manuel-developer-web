@@ -1,13 +1,13 @@
 @import "../../../../assets/themes/themes.scss";
+@import "../../../../assets/themes/breakpoints.scss";
 
 section#education {
   scroll-margin-top: 5rem;
   padding: 1.5rem 5rem;
   background: $grey-14;
-}
-
-.education {
-  padding-left: 2rem;
+  .education {
+    padding-left: 2rem;
+  }
 }
 
 .description {
@@ -17,8 +17,19 @@ section#education {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $tablet-breakpoint) {
   section#education {
     padding: 1.5rem 2rem;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  section#education {
+    .education {
+      padding-left: 1rem;
+    }
+  }
+  .description {
+    padding-left: 1rem;
   }
 }

@@ -1,14 +1,14 @@
 @import "../../../../assets/themes/themes.scss";
+@import "../../../../assets/themes/breakpoints.scss";
 
 section#experience {
   scroll-margin-top: 5rem;
   padding: 1.5rem 5rem;
   background: $d-primary-dark-color;
   opacity: 0.8;
-}
-
-.experience {
-  padding-left: 2rem;
+  .experience {
+    padding-left: 2rem;
+  }
 }
 
 .description {
@@ -19,8 +19,20 @@ section#experience {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $tablet-breakpoint) {
   section#experience {
     padding: 1.5rem 2rem;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  section#experience {
+    .experience {
+      padding-left: 1rem;
+    }
+  }
+
+  .description {
+    padding-left: 1rem;
   }
 }

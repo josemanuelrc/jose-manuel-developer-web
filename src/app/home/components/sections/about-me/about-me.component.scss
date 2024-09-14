@@ -1,21 +1,32 @@
 @import "../../../../assets/themes/themes.scss";
+@import "../../../../assets/themes/breakpoints.scss";
 
 section#about-me {
   scroll-margin-top: 5rem;
   padding: 1.5rem 5rem;
   background: $grey-13;
-}
-
-.about-me {
-  padding: 0rem 2rem;
-
-  p {
-    color: $white;
+  .about-me {
+    padding-inline: 2rem;
   }
 }
 
-@media (max-width: 768px) {
+p {
+  color: $white;
+}
+
+@media (max-width: $tablet-breakpoint) {
   section#about-me {
     padding: 1.5rem 2rem;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  section#about-me {
+    section#about-me {
+      padding: 1.5rem 2rem;
+    }
+    .about-me {
+      padding-inline: 1rem;
+    }
   }
 }

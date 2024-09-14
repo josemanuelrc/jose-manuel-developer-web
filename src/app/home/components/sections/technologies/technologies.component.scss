@@ -1,21 +1,31 @@
 @import "../../../../assets/themes/themes.scss";
+@import "../../../../assets/themes/breakpoints.scss";
 
 section#technologies {
   scroll-margin-top: 5rem;
   padding: 1.5rem 5rem;
   background: linear-gradient(to bottom, $grey-02, $grey-03);
   height: 30rem;
-  h3 {
-    color: $d-primary-dark-color;
+
+  .technologies {
+    padding-inline: 2rem;
   }
 }
 
-.technologies {
-  padding: 0rem 2rem;
+h3 {
+  color: $d-primary-dark-color;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $tablet-breakpoint) {
   section#technologies {
     padding: 1.5rem 2rem;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  section#technologies {
+    .technologies {
+      padding-inline: 1rem;
+    }
   }
 }

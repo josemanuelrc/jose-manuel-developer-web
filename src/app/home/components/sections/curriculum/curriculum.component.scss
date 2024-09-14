@@ -1,18 +1,18 @@
-@import "./../../../../assets/themes/themes.scss";
+@import "../../../../assets/themes/themes.scss";
+@import "../../../../assets/themes/breakpoints.scss";
 
 section#curriculum {
   scroll-margin-top: 5rem;
   padding: 1.5rem 5rem;
   background: $grey-13;
-  p {
-    color: $white;
+  .curriculum {
+    padding-inline: 2rem;
   }
 }
 
-.curriculum {
-  padding: 0rem 2rem;
+p {
+  color: $white;
 }
-
 .btn-download {
   cursor: pointer;
   display: inline-block;
@@ -24,18 +24,25 @@ section#curriculum {
   border-radius: 25px;
   border: none;
   transition: transform 0.2s ease-in-out;
-}
-
-.btn-download:hover {
-  transform: scale(1.05);
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 #link {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $tablet-breakpoint) {
   section#curriculum {
     padding: 1.5rem 2rem;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  section#curriculum {
+    .curriculum {
+      padding-inline: 1rem;
+    }
   }
 }
