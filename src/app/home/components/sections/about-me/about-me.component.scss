@@ -14,6 +14,16 @@ p {
   color: $white;
 }
 
+@media (min-width: $desktop-breakpoint) {
+  section#about-me {
+    display: grid;
+    place-items: center;
+    article {
+      width: $max-content-width;
+    }
+  }
+}
+
 @media (max-width: $tablet-breakpoint) {
   section#about-me {
     padding: 1.5rem 2rem;

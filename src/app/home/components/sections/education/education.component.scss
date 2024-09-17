@@ -17,6 +17,16 @@ section#education {
   }
 }
 
+@media (min-width: $desktop-breakpoint) {
+  section#education {
+    display: grid;
+    place-items: center;
+    article {
+      width: $max-content-width;
+    }
+  }
+}
+
 @media (max-width: $tablet-breakpoint) {
   section#education {
     padding: 1.5rem 2rem;

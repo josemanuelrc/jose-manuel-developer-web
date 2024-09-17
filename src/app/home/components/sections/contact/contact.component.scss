@@ -14,6 +14,16 @@ h3 {
   color: $d-primary-dark-color;
 }
 
+@media (min-width: $desktop-breakpoint) {
+  section#contact {
+    display: grid;
+    place-items: center;
+    article {
+      width: $max-content-width;
+    }
+  }
+}
+
 @media (max-width: $tablet-breakpoint) {
   section#contact {
     padding: 1.5rem 2rem;
