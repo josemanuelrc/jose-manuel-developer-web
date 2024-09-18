@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
@@ -13,12 +13,7 @@ export class SvgIconComponent implements OnInit {
   @Input() svgColor = 'currentColor'; // Color por defecto
   svgContent: SafeHtml = '';
 
-  constructor(
-    private http: HttpClient,
-    private sanitizer: DomSanitizer,
-    private renderer: Renderer2,
-    private elementRef: ElementRef
-  ) {}
+  constructor(private http: HttpClient, private sanitizer: DomSanitizer) {}
 
   ngOnInit(): void {
     this.loadSvg();

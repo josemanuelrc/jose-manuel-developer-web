@@ -1,6 +1,6 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { NgClass } from '@angular/common';
-import { SvgIconComponent } from '../../svg-icon/svg-icon.component';
+import { SvgIconComponent } from 'src/app/home/components/svg-icon/svg-icon.component';
 
 @Component({
   selector: 'app-nav',

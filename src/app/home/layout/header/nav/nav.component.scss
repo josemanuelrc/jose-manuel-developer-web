@@ -10,37 +10,33 @@ nav {
 
 .nav-bar-title {
   display: none;
-}
-
-.nav-bar-title a {
-  font-size: larger;
-}
-
-.nav-bar-list {
-  display: flex;
-  padding: 0;
-  height: 100%;
-}
-
-.nav-bar-li {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-ul {
-  list-style: none;
-  li:hover {
-    background-color: $d-primary-dark-color;
-    transition: 0.3s ease-in-out;
-    a {
-      margin-inline: 0.5rem;
-    }
+  a {
+    font-size: 1.5rem;
+    color: $white;
   }
 }
 
-a {
-  color: $white;
+ul.nav-bar-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  height: 100%;
+  li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    :hover {
+      background-color: $d-primary-dark-color;
+      transition: 0.3s ease-in-out;
+    }
+
+    a {
+      padding-inline: 0.5rem;
+      height: 100%;
+      color: $white;
+    }
+  }
 }
 
 .menu-btn {
@@ -75,7 +71,7 @@ a {
     display: block;
   }
 
-  .nav-bar-list {
+  ul.nav-bar-list {
     display: none;
   }
 
@@ -91,7 +87,7 @@ a {
   }
 
   .menu-dropdown ul li {
-    //display: block;
+    display: block;
     padding: 0.5rem;
     border-top: 0.15rem solid white;
   }

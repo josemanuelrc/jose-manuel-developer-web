@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { LangSelectorComponent } from './lang-selector/lang-selector.component';
 import { ThemeToggleSliderComponent } from './theme-toggle-slider/theme-toggle-slider.component';
-import { SvgIconComponent } from '../svg-icon/svg-icon.component';
+import { SvgIconComponent } from '../../components/svg-icon/svg-icon.component';
 
 @Component({
   selector: 'app-footer',

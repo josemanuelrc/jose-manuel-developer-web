@@ -2,7 +2,7 @@ import { Component, OnDestroy, inject } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ThemeService } from '../services/theme.service';
 import { NgClass } from '@angular/common';
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from './layout/header/header.component';
 import { TitleComponent } from './components/sections/title/title.component';
 import { AboutMeComponent } from './components/sections/about-me/about-me.component';
 import { ExperienceComponent } from './components/sections/experience/experience.component';
@@ -10,7 +10,7 @@ import { TechnologiesComponent } from './components/sections/technologies/techno
 import { EducationComponent } from './components/sections/education/education.component';
 import { CurriculumComponent } from './components/sections/curriculum/curriculum.component';
 import { ContactComponent } from './components/sections/contact/contact.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @Component({
   selector: 'app-home',
