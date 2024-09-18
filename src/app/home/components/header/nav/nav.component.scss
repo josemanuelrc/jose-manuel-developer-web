@@ -3,7 +3,6 @@
 nav {
   display: flex;
   justify-content: flex-end;
-
   align-items: center;
   height: 4rem;
   padding-right: 5rem;
@@ -29,30 +28,19 @@ nav {
   height: 100%;
 }
 
-.nav-bar-buttons {
-  /* NOTHING */
-}
-
 ul {
   list-style: none;
-}
-
-ul li:hover {
-  background-color: $d-primary-dark-color;
-  transition: 0.3s ease-in-out;
-}
-
-ul li a {
-  margin: 0.5rem;
-}
-
-ul li a i {
-  width: 20px;
+  li:hover {
+    background-color: $d-primary-dark-color;
+    transition: 0.3s ease-in-out;
+    a {
+      margin-inline: 0.5rem;
+    }
+  }
 }
 
 a {
   color: $white;
-  font-weight: bold;
 }
 
 .menu-btn {

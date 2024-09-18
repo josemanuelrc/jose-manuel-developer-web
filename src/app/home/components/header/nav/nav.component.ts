@@ -1,12 +1,13 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { NgClass } from '@angular/common';
+import { SvgIconComponent } from '../../svg-icon/svg-icon.component';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass, SvgIconComponent],
 })
 export class NavComponent {
   @ViewChild('navDropList') navDropList: ElementRef | undefined;

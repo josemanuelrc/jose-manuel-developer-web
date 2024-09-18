@@ -5,11 +5,33 @@
       <h2>Full-Stack Web Developer</h2>
       <p>¡Bienvenido a mi página web!</p>
       <div class="links">
-        <a href="https://www.linkedin.com/in/jose-manuel-r-c/" target="_blank">
-          <i class="fa-brands fa-linkedin-in" name="LinkedIn"></i>
+        <!-- LINKEDIN -->
+        <a
+          href="https://www.linkedin.com/in/jose-manuel-r-c/"
+          target="_blank"
+          aria-label="LinkdeIn"
+        >
+          <app-svg-icon [svgName]="'linkedin-in'" />
         </a>
-        <a href="https://github.com/josemanuelrc" target="_blank">
-          <i class="fa-brands fa-github" name="GitHub"></i>
+        <!-- GITHUB -->
+        <a
+          href="https://github.com/josemanuelrc"
+          target="_blank"
+          aria-label="Github"
+        >
+          <app-svg-icon [svgName]="'github'" />
+        </a>
+        <!-- MAIL -->
+        <a href="#contact" aria-label="Contact">
+          <app-svg-icon [svgName]="'mail'" />
+        </a>
+        <!-- PHONE -->
+        <a
+          href="https://github.com/josemanuelrc"
+          target="_blank"
+          aria-label="Phone"
+        >
+          <app-svg-icon [svgName]="'phone'" />
         </a>
       </div>
     </div>

@@ -14,40 +14,29 @@ footer {
   gap: 1rem;
 }
 
-.section {
-  //width: 16rem;
-}
-
 .acessibility-section {
   width: 12rem;
 }
 
-.section-container {
-}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  li {
+    a,
+    h4 {
+      padding: 0.5rem 0rem;
+    }
+  }
 
-.section-container a,
-h4 {
-  padding: 0.5rem 0rem;
-}
-
-.space-between {
-  display: flex;
-  justify-content: space-between;
+  .space-between {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .sub-footer-container {
   padding: 0.5rem 3rem;
   background-color: $grey-14;
-}
-
-.separator {
-  width: 0.2rem;
-  height: 200px;
-  background-color: $white;
-}
-
-h2 {
-  color: $white;
 }
 
 h3 {

@@ -4,63 +4,61 @@
     <a href="#">Menú</a>
   </div>
   <!-- NAVIGATION BAR LIST -->
-
   <ul class="nav-bar-list">
     <li class="nav-bar-li">
       <a href="#">
         <i class="fa-sharp fa-solid fa-house"></i>
+        <app-svg-icon [svgName]="'home'" />
         Inicio
       </a>
     </li>
     <li class="nav-bar-li">
       <a href="#about-me">
-        <i class="fa-sharp fa-solid fa-circle-info"></i>
+        <app-svg-icon [svgName]="'info'" />
         Sobre mí
       </a>
     </li>
     <li class="nav-bar-li">
       <a href="#experience">
-        <i class="fa-sharp fa-solid fa-briefcase"></i>
+        <app-svg-icon [svgName]="'briefcase'" />
         Experiencia
       </a>
     </li>
     <li class="nav-bar-li">
       <a href="#technologies">
-        <i class="fa-sharp fa-solid fa-code"></i>
+        <app-svg-icon [svgName]="'code'" />
         Tecnologías
       </a>
     </li>
     <li class="nav-bar-li">
       <a href="#education">
-        <i class="fa-sharp fa-solid fa-book"></i>
+        <app-svg-icon [svgName]="'book'" />
         Formación
       </a>
     </li>
     <li class="nav-bar-li">
       <a href="#curriculum">
-        <i class="fa-sharp fa-solid fa-clipboard"></i>
+        <app-svg-icon [svgName]="'file'" />
         Currículum Vitae
       </a>
     </li>
     <li class="nav-bar-li">
       <a href="#contact">
-        <i class="fa-sharp fa-solid fa-message"></i>
+        <app-svg-icon [svgName]="'chat'" />
         Contacto
       </a>
     </li>
   </ul>
 
   <!-- NAVIGATION BUTTONS -->
-  <div class="nav-bar-buttons">
+  <div class="nav-bar-button">
     <!-- MENU BUTTON -->
-    <button class="menu-btn" (click)="toggleMenu()">
-      <i
-        [ngClass]="
-          isMenuOpen
-            ? 'fa-sharp fa-solid fa-x fa-2x'
-            : 'fa-sharp fa-solid fa-bars fa-2x'
-        "
-      ></i>
+    <button class="menu-btn" aria-label="Menu Button" (click)="toggleMenu()">
+      @if(isMenuOpen) {
+      <app-svg-icon [svgName]="'close'" />
+      } @else {
+      <app-svg-icon [svgName]="'menu'" />
+      }
     </button>
   </div>
 </nav>
@@ -69,43 +67,43 @@
   <ul>
     <li>
       <a href="#">
-        <i class="fa-sharp fa-solid fa-house"></i>
+        <app-svg-icon [svgName]="'home'" />
         Inicio
       </a>
     </li>
     <li>
       <a href="#about-me" (click)="toggleMenu()">
-        <i class="fa-sharp fa-solid fa-circle-info"></i>
+        <app-svg-icon [svgName]="'info'" />
         Sobre mí
       </a>
     </li>
     <li>
       <a href="#experience" (click)="toggleMenu()">
-        <i class="fa-sharp fa-solid fa-briefcase"></i>
+        <app-svg-icon [svgName]="'briefcase'" />
         Experiencia
       </a>
     </li>
     <li>
       <a href="#technologies" (click)="toggleMenu()">
-        <i class="fa-sharp fa-solid fa-code"></i>
+        <app-svg-icon [svgName]="'code'" />
         Tecnologías
       </a>
     </li>
     <li>
       <a href="#education" (click)="toggleMenu()">
-        <i class="fa-sharp fa-solid fa-book"></i>
+        <app-svg-icon [svgName]="'book'" />
         Formación
       </a>
     </li>
     <li>
       <a href="#curriculum" (click)="toggleMenu()">
-        <i class="fa-sharp fa-solid fa-clipboard"></i>
+        <app-svg-icon [svgName]="'file'" />
         Currículum Vitae
       </a>
     </li>
     <li>
       <a href="#contact" (click)="toggleMenu()">
-        <i class="fa-sharp fa-solid fa-message"></i>
+        <app-svg-icon [svgName]="'chat'" />
         Contacto
       </a>
     </li>
