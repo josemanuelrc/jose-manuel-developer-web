@@ -2,10 +2,12 @@
   <app-header></app-header>
   <main>
     <div class="video-container">
+      @defer {
       <video autoplay muted loop poster="assets/images/background-picture.png">
         <source src="assets/video/background.mp4" type="video/mp4" />
         Tu navegador no soporta la etiqueta de video.
       </video>
+      }
     </div>
     <app-title></app-title>
     <app-about-me></app-about-me>
