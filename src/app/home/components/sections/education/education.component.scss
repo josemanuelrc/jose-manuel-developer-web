@@ -19,10 +19,10 @@ section#education {
 
 @media (min-width: $desktop-breakpoint) {
   section#education {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
     article {
-      width: $max-content-width;
+      max-width: $max-content-width;
     }
   }
 }

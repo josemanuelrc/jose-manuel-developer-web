@@ -4,7 +4,7 @@
 section#curriculum {
   scroll-margin-top: 5rem;
   padding: 1.5rem 5rem;
-  background: $grey-13;
+  background: $grey-14;
   .curriculum {
     padding-inline: 2rem;
   }
@@ -19,7 +19,7 @@ p {
   padding: 10px 20px;
   font-size: 1rem;
   font-weight: bold;
-  color: $grey-13;
+  color: $grey-14;
   background-color: $d-primary-color;
   border-radius: 25px;
   border: none;
@@ -35,10 +35,10 @@ p {
 
 @media (min-width: $desktop-breakpoint) {
   section#curriculum {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
     article {
-      width: $max-content-width;
+      max-width: $max-content-width;
     }
   }
 }

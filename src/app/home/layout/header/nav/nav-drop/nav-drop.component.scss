@@ -1,0 +1,50 @@
+@import "src/app/assets/themes/themes.scss";
+@import "src/app/assets/themes/breakpoints.scss";
+
+.nav-drop-list {
+  position: absolute;
+  width: 100%;
+  background-color: $black;
+  opacity: 0.9;
+  ul {
+    li {
+      padding-block: 0.25rem;
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding-inline: 5rem;
+        color: $white;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          transition: 0.2s ease-in-out;
+          color: $grey-14;
+          background-color: $grey-01;
+          font-size: bold;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $laptop-breakpoint) {
+  .nav-drop-list {
+    ul {
+      li {
+        a {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding-inline: 5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  nav {
+    padding: 0 2rem;
+  }
+}

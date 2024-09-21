@@ -3,6 +3,9 @@
   <div class="nav-bar-title">
     <a href="#">Menú</a>
   </div>
+
+  <img src="assets/images/logo.png" alt="José Manuel Logo" />
+
   <!-- NAVIGATION BAR LIST -->
   <ul class="nav-bar-list">
     <li>
@@ -39,7 +42,7 @@
     <li>
       <a href="#curriculum">
         <app-svg-icon [svgName]="'file'" />
-        Currículum Vitae
+        Currículum
       </a>
     </li>
     <li>
@@ -58,50 +61,7 @@
     }
   </button>
 </nav>
-<!-- NAVIGATION DROPDOWN LIST -->
-<nav #navDropList class="nav-drop-list" [class.menu-dropdown]="isMenuOpen">
-  <ul>
-    <li>
-      <a href="#">
-        <app-svg-icon [svgName]="'home'" />
-        Inicio
-      </a>
-    </li>
-    <li>
-      <a href="#about-me" (click)="toggleMenu()">
-        <app-svg-icon [svgName]="'info'" />
-        Sobre mí
-      </a>
-    </li>
-    <li>
-      <a href="#experience" (click)="toggleMenu()">
-        <app-svg-icon [svgName]="'briefcase'" />
-        Experiencia
-      </a>
-    </li>
-    <li>
-      <a href="#technologies" (click)="toggleMenu()">
-        <app-svg-icon [svgName]="'code'" />
-        Tecnologías
-      </a>
-    </li>
-    <li>
-      <a href="#education" (click)="toggleMenu()">
-        <app-svg-icon [svgName]="'book'" />
-        Formación
-      </a>
-    </li>
-    <li>
-      <a href="#curriculum" (click)="toggleMenu()">
-        <app-svg-icon [svgName]="'file'" />
-        Currículum Vitae
-      </a>
-    </li>
-    <li>
-      <a href="#contact" (click)="toggleMenu()">
-        <app-svg-icon [svgName]="'chat'" />
-        Contacto
-      </a>
-    </li>
-  </ul>
-</nav>
+<!-- NAV DROP LIST -->
+@if(isMenuOpen) {
+<app-nav-drop [(isMenuOpen)]="isMenuOpen" />
+}

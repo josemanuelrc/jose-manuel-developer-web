@@ -5,7 +5,7 @@ section#technologies {
   scroll-margin-top: 5rem;
   padding: 1.5rem 5rem;
   background: linear-gradient(to bottom, $grey-02, $grey-03);
-  height: 30rem;
+  min-height: 30rem;
 
   .technologies {
     padding-inline: 2rem;
@@ -16,12 +16,37 @@ h3 {
   color: $d-primary-dark-color;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+
+  .item {
+    background-color: $black;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    p {
+      color: $white;
+    }
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
 @media (min-width: $desktop-breakpoint) {
   section#technologies {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
     article {
-      width: $max-content-width;
+      max-width: $max-content-width;
+      min-width: min(100%, $desktop-breakpoint);
     }
   }
 }

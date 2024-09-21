@@ -1,11 +1,19 @@
-@import "./../../../../../app/assets/themes/themes.scss";
+@import "src/app/assets/themes/themes.scss";
+@import "src/app/assets/themes/breakpoints.scss";
 
 nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   height: 4rem;
-  padding-right: 5rem;
+  padding-inline: 4rem;
+  background-color: $black;
+  //opacity: 0.9;
+}
+
+img {
+  width: 4rem;
+  height: 4rem;
 }
 
 .nav-bar-title {
@@ -17,29 +25,39 @@ nav {
 }
 
 ul.nav-bar-list {
-  list-style: none;
   display: flex;
-  padding: 0;
   height: 100%;
+
   li {
     display: flex;
     align-items: center;
     height: 100%;
+    transition: 0.5s ease-in-out;
 
     :hover {
-      background-color: $d-primary-dark-color;
-      transition: 0.3s ease-in-out;
+      transition: 0.5s ease-in-out;
+      background-color: $white;
+      font-weight: bold;
+      color: $black;
     }
 
     a {
+      display: flex;
+      align-items: center;
       padding-inline: 0.5rem;
       height: 100%;
       color: $white;
+
+      &:hover {
+        transition: 0.6s ease-in-out;
+        font-size: 1.4rem;
+      }
     }
   }
 }
 
 .menu-btn {
+  display: none;
   background: none;
   border: none;
   color: white;
@@ -48,25 +66,15 @@ ul.nav-bar-list {
   }
 }
 
-.nav-drop-list {
-  display: none;
-}
-
-@media (min-width: 1025px) {
-  .menu-btn {
-    display: none;
-  }
-
-  .menu-dropdown {
-    display: none;
-  }
-}
-
-@media (max-width: 1024px) {
+@media (max-width: $laptop-breakpoint) {
   nav {
-    justify-content: space-between;
     padding: 0 5rem;
   }
+
+  img {
+    display: none;
+  }
+
   .nav-bar-title {
     display: block;
   }
@@ -75,25 +83,12 @@ ul.nav-bar-list {
     display: none;
   }
 
-  .menu-dropdown {
-    display: block;
-    background-color: $d-primary-color;
-  }
-
-  .menu-dropdown ul {
-    display: block;
-    margin: 0;
-    padding: 0;
-  }
-
-  .menu-dropdown ul li {
-    display: block;
-    padding: 0.5rem;
-    border-top: 0.15rem solid white;
+  .menu-btn {
+    display: inline;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $tablet-breakpoint) {
   nav {
     padding: 0 2rem;
   }
