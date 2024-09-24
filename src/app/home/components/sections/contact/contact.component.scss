@@ -4,14 +4,65 @@
 section#contact {
   scroll-margin-top: 5rem;
   padding: 1.5rem 5rem;
-  background: $grey-03;
+  background: $grey-13;
   .contact {
     padding-inline: 2rem;
   }
 }
 
-h3 {
-  color: $d-primary-dark-color;
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    label {
+      color: $white;
+    }
+
+    input {
+      color: $white;
+      background: $grey-12;
+      height: 2rem;
+      padding: 0.5rem;
+      border: 2px solid $grey-06;
+    }
+
+    &.message {
+      grid-column: span 2;
+
+      textarea {
+        resize: vertical;
+        min-height: 15rem;
+        max-height: 50rem;
+        padding: 0.5rem;
+        color: $white;
+        background: $grey-12;
+      }
+    }
+    span.error {
+      color: $error;
+      font-size: 0.75rem;
+    }
+  }
+
+  button {
+    grid-column: span 2;
+    width: 10rem;
+    justify-self: self-end;
+    padding: 0.75rem 1rem;
+    margin-top: 16px;
+    background: $black;
+    &:disabled {
+      background: $grey-09;
+      cursor: not-allowed;
+    }
+  }
 }
 
 @media (min-width: $desktop-breakpoint) {
@@ -20,6 +71,7 @@ h3 {
     justify-content: center;
     article {
       max-width: $max-content-width;
+      min-width: min(100%, 1440px);
     }
   }
 }
@@ -27,6 +79,20 @@ h3 {
 @media (max-width: $tablet-breakpoint) {
   section#contact {
     padding: 1.5rem 2rem;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+    div {
+      &.message {
+        grid-column: span 1;
+      }
+    }
+
+    button {
+      width: 100%;
+      grid-column: span 1;
+    }
   }
 }
 

@@ -44,7 +44,13 @@
 }
 
 @media (max-width: $tablet-breakpoint) {
-  nav {
-    padding: 0 2rem;
+  .nav-drop-list {
+    ul {
+      li {
+        a {
+          padding-inline: 2rem;
+        }
+      }
+    }
   }
 }

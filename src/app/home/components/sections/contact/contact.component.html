@@ -3,12 +3,59 @@
     <h3>Contacto</h3>
     <hr />
     <div class="contact">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum eius
-        blanditiis dolorum reprehenderit asperiores pariatur, non libero
-        aspernatur omnis. Dolores quod cum delectus eligendi qui nobis commodi
-        nesciunt voluptas sit.
-      </p>
+      <form [formGroup]="contactForm">
+        <div>
+          <label for="name">Nombre: * </label>
+          <input
+            type="text"
+            name="name"
+            formControlName="name"
+            placeholder="Introduce tu nombre"
+            (blur)="isFieldInvalid('name')"
+          />
+          @if(isFieldInvalid('name')) {
+          <span class="error">
+            {{ getErrorMessage("name") }}
+          </span>
+          }
+        </div>
+
+        <div>
+          <label for="email">Email: * </label>
+          <input
+            type="email"
+            name="email"
+            formControlName="email"
+            placeholder="Introduce tu email"
+            (blur)="isFieldInvalid('email')"
+          />
+          @if(isFieldInvalid('email')) {
+          <span class="error">
+            {{ getErrorMessage("email") }}
+          </span>
+          }
+        </div>
+
+        <div class="message">
+          <label for="message">Mensaje: *</label>
+          <textarea
+            id="message"
+            name="message"
+            formControlName="message"
+            placeholder="Escribe tu mensaje"
+            (blur)="isFieldInvalid('message')"
+          ></textarea>
+          @if(isFieldInvalid('message')) {
+          <span class="error">
+            {{ getErrorMessage("message") }}
+          </span>
+          }
+        </div>
+
+        <button [disabled]="contactForm.invalid" (click)="sendEmail()">
+          Enviar
+        </button>
+      </form>
     </div>
   </article>
 </section>
