@@ -2,8 +2,6 @@
 @import "../../../../assets/themes/breakpoints.scss";
 
 section#experience {
-  scroll-margin-top: 5rem;
-  padding: 1.5rem 5rem;
   background: $d-primary-dark-color;
   opacity: 0.8;
   .experience {
@@ -16,23 +14,6 @@ section#experience {
   p,
   strong {
     color: $white;
-  }
-}
-
-@media (min-width: $desktop-breakpoint) {
-  section#experience {
-    display: flex;
-    justify-content: center;
-    article {
-      max-width: $max-content-width;
-      min-width: min(100%, $max-content-width);
-    }
-  }
-}
-
-@media (max-width: $tablet-breakpoint) {
-  section#experience {
-    padding: 1.5rem 2rem;
   }
 }
 

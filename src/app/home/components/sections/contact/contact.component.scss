@@ -2,8 +2,6 @@
 @import "../../../../assets/themes/breakpoints.scss";
 
 section#contact {
-  scroll-margin-top: 5rem;
-  padding: 1.5rem 5rem;
   background: $grey-13;
   .contact {
     padding-inline: 2rem;
@@ -65,22 +63,7 @@ form {
   }
 }
 
-@media (min-width: $desktop-breakpoint) {
-  section#contact {
-    display: flex;
-    justify-content: center;
-    article {
-      max-width: $max-content-width;
-      min-width: min(100%, 1440px);
-    }
-  }
-}
-
 @media (max-width: $tablet-breakpoint) {
-  section#contact {
-    padding: 1.5rem 2rem;
-  }
-
   form {
     grid-template-columns: 1fr;
     div {

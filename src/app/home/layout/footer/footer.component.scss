@@ -1,10 +1,6 @@
-@import "./../../../assets/themes/themes.scss";
+@import "src/app/assets/themes/themes.scss";
 
 footer {
-}
-
-.footer-container {
-  padding: 1rem 3rem;
   background-color: $grey-14;
 }
 
@@ -14,30 +10,24 @@ footer {
   gap: 1rem;
 }
 
-.acessibility-section {
-  width: 12rem;
-}
-
 ul {
   li {
-    a,
-    h4 {
+    p,
+    a {
       display: flex;
       align-items: center;
       gap: 0.25rem;
       padding: 0.5rem 0rem;
+      font-size: 1rem;
+      color: $white;
     }
   }
 
   .space-between {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
-}
-
-.sub-footer-container {
-  padding: 0.5rem 3rem;
-  background-color: $grey-14;
 }
 
 h3 {
@@ -57,9 +47,6 @@ a {
 }
 
 @media (max-width: 768px) {
-  .footer-container {
-    padding: 1rem 2rem;
-  }
   .footer-info-container {
     grid-template-columns: auto auto;
     transition: grid-template-columns 2s ease-in-out;

@@ -1,26 +1,26 @@
-<section id="curriculum">
-  <article>
+<section id="curriculum" class="box-container">
+  <article class="box-content">
     <h3>Currículum Vitae</h3>
     <hr />
     <div class="curriculum">
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum eius
-        blanditiis dolorum reprehenderit asperiores pariatur, non libero
-        aspernatur omnis. Dolores quod cum delectus eligendi qui nobis commodi
-        nesciunt voluptas sit.
+        ¿Te interesa saber más sobre mi? Descarga mi CV y explora mis
+        habilidades, proyectos y logros profesionales ¡No dudes en contactarme!
       </p>
-      <button class="btn-download" (click)="downloadFile()">
-        Descargar CV
-      </button>
-      <a
-        #link
-        id="link"
-        href="assets/documents/curriculum.pdf"
-        download="curriculum.pdf"
-        name="Descargar Currículum"
-      >
-        Link -OCULTO-
-      </a>
+      <div class="btn-container">
+        <button class="btn-download" (click)="downloadFile()">
+          Descargar CV
+        </button>
+        <a
+          #link
+          id="link"
+          href="assets/documents/curriculum.pdf"
+          download="curriculum.pdf"
+          name="Descargar Currículum"
+        >
+          Link -OCULTO-
+        </a>
+      </div>
     </div>
   </article>
 </section>

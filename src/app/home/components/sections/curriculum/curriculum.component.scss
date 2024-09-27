@@ -2,51 +2,35 @@
 @import "../../../../assets/themes/breakpoints.scss";
 
 section#curriculum {
-  scroll-margin-top: 5rem;
-  padding: 1.5rem 5rem;
   background: $grey-14;
   .curriculum {
     padding-inline: 2rem;
   }
 }
 
-p {
-  color: $white;
-}
-.btn-download {
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: $grey-14;
-  background-color: $d-primary-color;
-  border-radius: 25px;
-  border: none;
-  transition: transform 0.2s ease-in-out;
-  &:hover {
-    transform: scale(1.05);
+.btn-container {
+  display: flex;
+  justify-content: center;
+
+  .btn-download {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $grey-14;
+    background-color: $d-primary-color;
+    border-radius: 25px;
+    border: none;
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }
 
 #link {
   display: none;
-}
-
-@media (min-width: $desktop-breakpoint) {
-  section#curriculum {
-    display: flex;
-    justify-content: center;
-    article {
-      max-width: $max-content-width;
-    }
-  }
-}
-
-@media (max-width: $tablet-breakpoint) {
-  section#curriculum {
-    padding: 1.5rem 2rem;
-  }
 }
 
 @media (max-width: $mobile-breakpoint) {
