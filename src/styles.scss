@@ -116,3 +116,15 @@ ul {
     padding: 1.5rem 2rem;
   }
 }
+
+@media (max-width: $mobile-breakpoint) {
+  .box-container {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+@media (max-width: $mobile-sm-breakpoint) {
+  .box-container {
+    padding: 1.5rem 1rem;
+  }
+}

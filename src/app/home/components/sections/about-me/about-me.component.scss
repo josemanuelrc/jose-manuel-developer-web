@@ -5,11 +5,35 @@ section#about-me {
   background: $grey-14;
   .about-me {
     padding-inline: 2rem;
+    display: flex;
+    gap: 2rem;
+
+    img {
+      margin-top: 1rem;
+      width: min(40rem, 100%);
+      height: auto;
+      border-radius: 1rem;
+    }
+  }
+}
+
+@media (max-width: $laptop-breakpoint) {
+  section#about-me {
+    .about-me {
+      flex-direction: column;
+      align-items: center;
+      gap: 0rem;
+      img {
+        width: 100%;
+      }
+    }
   }
 }
 
 @media (max-width: $mobile-breakpoint) {
-  .about-me {
-    padding-inline: 1rem;
+  section#about-me {
+    .about-me {
+      padding-inline: 1rem;
+    }
   }
 }

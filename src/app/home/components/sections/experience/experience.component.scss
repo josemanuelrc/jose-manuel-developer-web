@@ -1,26 +1,71 @@
-@import "../../../../assets/themes/themes.scss";
-@import "../../../../assets/themes/breakpoints.scss";
+@import "src/app/assets/themes/themes.scss";
+@import "src/app/assets/themes/breakpoints.scss";
 
 section#experience {
-  background: $d-primary-dark-color;
-  opacity: 0.8;
+  background: rgba($d-primary-dark-color, 0.7);
+  .timeline {
+    margin-inline: 2rem;
+  }
+
   .experience {
-    padding-left: 2rem;
+    position: relative;
+    padding-left: 1rem;
+    &::after {
+      content: "";
+      position: absolute;
+      height: calc(100% - 1rem);
+      width: 2px;
+      left: -0.25rem;
+      top: 1.75rem;
+      background-color: $d-primary-color;
+    }
+  }
+}
+
+h4 {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0.75rem;
+    height: 0.75rem;
+    left: calc(-1.5rem - 1px);
+    top: 0.5rem;
+    border-radius: 50%;
+    background-color: $d-primary-color;
   }
 }
 
 .description {
   padding-left: 2rem;
-  p,
-  strong {
+  p {
     color: $white;
+  }
+}
+
+.tech-chip {
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  margin: 0.25rem;
+  background-color: $grey-01;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: $grey-13;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  :hover {
+    background-color: $grey-03;
+    border-color: $grey-02;
   }
 }
 
 @media (max-width: $mobile-breakpoint) {
   section#experience {
-    .experience {
-      padding-left: 1rem;
+    .timeline {
+      margin-inline: 1rem;
     }
   }
 

@@ -2,45 +2,22 @@
   <article class="box-content">
     <h3>Experiencia</h3>
     <hr />
-    <div class="experience">
-      <h4>Desarrollador Web Full-Stack</h4>
-      <h5>SOLTEL Group</h5>
-      <div class="description">
-        <p>Diseño y Desarrollo de Portal Web para Datalake de IFAPA</p>
-        <p>
-          <strong>Tecnologías: </strong>
-        </p>
-      </div>
-    </div>
-    <div class="experience">
-      <h4>Desarrollador Web Full-Stack</h4>
-      <h5>Ayesa Advanced Technologies</h5>
-      <div class="description">
-        <p>Diseño y Desarrollo de Portal Web para Datalake de IFAPA</p>
-        <p>
-          <strong>Tecnologías: </strong>
-        </p>
-      </div>
-    </div>
-    <div class="experience">
-      <h4>Programador Junior</h4>
-      <h5>SGRSoft</h5>
-      <div class="description">
-        <p>Diseño y Desarrollo de Portal Web para Datalake de IFAPA</p>
-        <p>
-          <strong>Tecnologías: </strong>
-        </p>
-      </div>
-    </div>
-    <div class="experience">
-      <h4>Desarrollador Web Full-Stack</h4>
-      <h5>Chapham Software Studio</h5>
-      <div class="description">
-        <p>Diseño y Desarrollo de Portal Web para Datalake de IFAPA</p>
-        <p>
-          <strong>Tecnologías: </strong>
-        </p>
-      </div>
-    </div>
+    <ul class="timeline">
+      @for(experience of experiences; track $index) {
+      <li class="experience">
+        <h4>{{ experience.title }}</h4>
+        <h5>{{ experience.period }} | {{ experience.company }}</h5>
+        <div class="description">
+          <p>{{ experience.description }}</p>
+
+          @for(tech of experience.technologies; track $index) {
+          <span class="tech-chip">
+            {{ tech }}
+          </span>
+          }
+        </div>
+      </li>
+      }
+    </ul>
   </article>
 </section>
