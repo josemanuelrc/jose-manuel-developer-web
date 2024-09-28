@@ -2,8 +2,6 @@
 @import "../../../../assets/themes/breakpoints.scss";
 
 section#technologies {
-  scroll-margin-top: 5rem;
-  padding: 1.5rem 5rem;
   background: $grey-13;
   min-height: 30rem;
 }
@@ -13,7 +11,6 @@ section#technologies {
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
-  padding-inline: 2rem;
 
   .item {
     display: flex;
@@ -28,31 +25,5 @@ section#technologies {
       cursor: pointer;
       transform: translateY(-5px);
     }
-  }
-}
-
-@media (min-width: $desktop-breakpoint) {
-  section#technologies {
-    display: flex;
-    justify-content: center;
-    article {
-      max-width: $max-content-width;
-      min-width: min(100%, $max-content-width);
-    }
-  }
-}
-
-@media (max-width: $tablet-breakpoint) {
-  section#technologies {
-    padding: 1.5rem 2rem;
-  }
-
-  .grid {
-    padding-inline: 1rem;
-  }
-}
-
-@media (max-width: $mobile-breakpoint) {
-  section#technologies {
   }
 }

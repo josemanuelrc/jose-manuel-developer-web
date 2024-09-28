@@ -3,9 +3,6 @@
 
 section#education {
   background: $grey-14;
-  .education {
-    padding-left: 2rem;
-  }
 }
 
 .description {
@@ -13,12 +10,6 @@ section#education {
 }
 
 @media (max-width: $mobile-breakpoint) {
-  section#education {
-    .education {
-      padding-left: 1rem;
-    }
-  }
-
   .description {
     padding-left: 1rem;
   }

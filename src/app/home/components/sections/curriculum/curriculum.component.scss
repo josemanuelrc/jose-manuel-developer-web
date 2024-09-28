@@ -3,9 +3,6 @@
 
 section#curriculum {
   background: $grey-14;
-  .curriculum {
-    padding-inline: 2rem;
-  }
 }
 
 .btn-container {
@@ -31,12 +28,4 @@ section#curriculum {
 
 #link {
   display: none;
-}
-
-@media (max-width: $mobile-breakpoint) {
-  section#curriculum {
-    .curriculum {
-      padding-inline: 1rem;
-    }
-  }
 }

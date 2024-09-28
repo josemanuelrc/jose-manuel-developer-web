@@ -3,45 +3,10 @@
 
 section#experience {
   background: rgba($d-primary-dark-color, 0.7);
-  .timeline {
-    margin-inline: 2rem;
-  }
-
-  .experience {
-    position: relative;
-    padding-left: 1rem;
-    &::after {
-      content: "";
-      position: absolute;
-      height: calc(100% - 1rem);
-      width: 2px;
-      left: -0.25rem;
-      top: 1.75rem;
-      background-color: $d-primary-color;
-    }
-  }
-}
-
-h4 {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 0.75rem;
-    height: 0.75rem;
-    left: calc(-1.5rem - 1px);
-    top: 0.5rem;
-    border-radius: 50%;
-    background-color: $d-primary-color;
-  }
 }
 
 .description {
   padding-left: 2rem;
-  p {
-    color: $white;
-  }
 }
 
 .tech-chip {
@@ -63,12 +28,6 @@ h4 {
 }
 
 @media (max-width: $mobile-breakpoint) {
-  section#experience {
-    .timeline {
-      margin-inline: 1rem;
-    }
-  }
-
   .description {
     padding-left: 1rem;
   }

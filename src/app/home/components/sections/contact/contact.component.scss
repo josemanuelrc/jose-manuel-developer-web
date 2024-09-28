@@ -3,9 +3,6 @@
 
 section#contact {
   background: $grey-13;
-  .contact {
-    padding-inline: 2rem;
-  }
 }
 
 form {
@@ -75,14 +72,6 @@ form {
     button {
       width: 100%;
       grid-column: span 1;
-    }
-  }
-}
-
-@media (max-width: $mobile-breakpoint) {
-  section#contact {
-    .contact {
-      padding-inline: 1rem;
     }
   }
 }

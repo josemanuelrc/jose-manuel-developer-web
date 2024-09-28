@@ -2,22 +2,24 @@
   <article class="box-content">
     <h3>Experiencia</h3>
     <hr />
-    <ul class="timeline">
-      @for(experience of experiences; track $index) {
-      <li class="experience">
-        <h4>{{ experience.title }}</h4>
-        <h5>{{ experience.period }} | {{ experience.company }}</h5>
-        <div class="description">
-          <p>{{ experience.description }}</p>
+    <div class="box-main-content">
+      <ul>
+        @for(experience of experiences; track $index) {
+        <li class="timeline-item">
+          <h4 class="timeline-item-title">{{ experience.title }}</h4>
+          <h5>{{ experience.period }} | {{ experience.company }}</h5>
+          <div class="description">
+            <p>{{ experience.description }}</p>
 
-          @for(tech of experience.technologies; track $index) {
-          <span class="tech-chip">
-            {{ tech }}
-          </span>
-          }
-        </div>
-      </li>
-      }
-    </ul>
+            @for(tech of experience.technologies; track $index) {
+            <span class="tech-chip">
+              {{ tech }}
+            </span>
+            }
+          </div>
+        </li>
+        }
+      </ul>
+    </div>
   </article>
 </section>

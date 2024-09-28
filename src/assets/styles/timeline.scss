@@ -1,0 +1,27 @@
+.timeline-item {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    height: calc(100% - 1rem);
+    width: 2px;
+    left: -1.25rem;
+    top: 1.75rem;
+    background-color: $d-primary-color;
+  }
+}
+
+.timeline-item-title {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0.75rem;
+    height: 0.75rem;
+    left: -1.5rem;
+    top: 0.5rem;
+    border-radius: 50%;
+    background-color: $d-primary-color;
+  }
+}

@@ -1,4 +1,5 @@
 @import "src/app/assets/themes/themes.scss";
+@import "src/app/assets/themes/breakpoints.scss";
 
 footer {
   background-color: $grey-14;
@@ -46,14 +47,14 @@ a {
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $tablet-breakpoint) {
   .footer-info-container {
     grid-template-columns: auto auto;
     transition: grid-template-columns 2s ease-in-out;
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: $mobile-breakpoint) {
   .footer-info-container {
     grid-template-columns: auto;
     transition: grid-template-columns 2s ease-in-out;
