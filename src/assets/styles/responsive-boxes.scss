@@ -1,7 +1,8 @@
 // Responsive Boxes
 .box-container {
   scroll-margin-top: 5rem;
-  padding: 1.5rem 5rem;
+  padding-block: 1.5rem 3rem;
+  padding-inline: 5rem;
   .box-content {
     .box-main-content {
       padding-inline: 2rem;
@@ -22,16 +23,16 @@
 
 @media (max-width: $tablet-breakpoint) {
   .box-container {
-    padding: 1.5rem 2rem;
+    padding: 2rem;
   }
 }
 
 @media (max-width: $mobile-breakpoint) {
   .box-container {
-    padding: 1.5rem 1.25rem;
+    padding: 1.25rem;
     .box-content {
       .box-main-content {
-        padding-inline: 2rem;
+        padding-inline: 1rem;
       }
     }
   }
@@ -39,6 +40,6 @@
 
 @media (max-width: $mobile-sm-breakpoint) {
   .box-container {
-    padding: 1.5rem 1rem;
+    padding: 1rem;
   }
 }

@@ -2,15 +2,47 @@
   <article class="box-content">
     <h3>Formación</h3>
     <hr />
-    <div class="box-main-content">
+    <div class="box-main-content education-container">
+      <h4>Títulos Académicos</h4>
       <ul>
-        <li *ngFor="let item of educationList" class="timeline-item">
-          <h4 class="timeline-item-title">{{ item.title }}</h4>
-          <h5>{{ item.date }}</h5>
+        @for(title of titles; track $index) {
+        <li class="timeline-item">
+          <h4 class="timeline-item-title">{{ title.title }}</h4>
+          <h5 class="timeline-item-period">
+            {{ title.period }} | {{ title.institution }}
+          </h5>
           <div class="description">
-            <p>{{ item.description }}</p>
+            <p>{{ title.description }}</p>
           </div>
         </li>
+        }
+      </ul>
+
+      <h4>Cursos</h4>
+      <ul>
+        @for(course of courses; track $index) {
+        <li class="timeline-item">
+          <h4 class="timeline-item-title">{{ course.title }}</h4>
+          <h5 class="timeline-item-period">
+            {{ course.period }} | {{ course.institution }}
+          </h5>
+          <div class="description">
+            <p>{{ course.description }}</p>
+          </div>
+        </li>
+        }
+      </ul>
+      <h4>Idiomas</h4>
+      <ul>
+        @for(language of languages; track $index) {
+        <li class="timeline-item">
+          <h4 class="timeline-item-title">{{ language.name }}</h4>
+          <h5 class="timeline-item-level">Nivel: {{ language.level }}</h5>
+          <div class="description">
+            <p>{{ language.description }}</p>
+          </div>
+        </li>
+        }
       </ul>
     </div>
   </article>

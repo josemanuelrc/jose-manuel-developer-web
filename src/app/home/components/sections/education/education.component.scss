@@ -3,6 +3,10 @@
 
 section#education {
   background: $grey-14;
+  .education-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .description {

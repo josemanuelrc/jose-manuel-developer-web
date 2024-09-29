@@ -9,8 +9,10 @@
           <h4 class="timeline-item-title">{{ experience.title }}</h4>
           <h5>{{ experience.period }} | {{ experience.company }}</h5>
           <div class="description">
-            <p>{{ experience.description }}</p>
-
+            @for( parragraf of experience.description; track $index){
+            <p>{{ parragraf }}</p>
+            }
+            <!-- TECH CHIPS -->
             @for(tech of experience.technologies; track $index) {
             <span class="tech-chip">
               {{ tech }}
