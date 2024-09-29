@@ -13,11 +13,19 @@ html {
 //}
 
 h1,
-h2,
 h5 {
   font-family: "PoiretOne", sans-serif;
   color: $white;
   &::selection {
+    background: $grey-06;
+  }
+}
+
+h2 {
+  font-family: "PoiretOne", sans-serif;
+  color: $d-primary-color;
+  &::selection {
+    color: $white;
     background: $grey-06;
   }
 }

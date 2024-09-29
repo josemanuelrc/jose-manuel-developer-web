@@ -7,6 +7,7 @@
   background-color: $black;
   opacity: 0.9;
   ul {
+    padding-block: 1rem;
     li {
       padding-block: 0.25rem;
       a {
@@ -21,7 +22,7 @@
           transition: 0.2s ease-in-out;
           color: $grey-14;
           background-color: $grey-01;
-          font-size: bold;
+          font-weight: bold;
         }
       }
     }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { SvgIconComponent } from '../../svg-icon/svg-icon.component';
 
 @Component({
@@ -8,4 +8,10 @@ import { SvgIconComponent } from '../../svg-icon/svg-icon.component';
   standalone: true,
   imports: [SvgIconComponent],
 })
-export class TitleComponent {}
+export class TitleComponent {
+  @ViewChild('link', { static: false }) link: ElementRef | undefined;
+
+  downloadFile() {
+    this.link?.nativeElement.click();
+  }
+}

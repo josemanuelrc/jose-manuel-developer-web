@@ -1,65 +1,67 @@
-<nav #navBar class="nav-bar">
-  <!-- NAVIGATION BAR TITTLE -->
-  <div class="nav-bar-title">
-    <a href="#">Menú</a>
+<nav #navBar class="box-container">
+  <div class="box-content nav-bar">
+    <!-- NAVIGATION BAR TITTLE -->
+    <div class="nav-bar-title">
+      <a href="#">Menú</a>
+    </div>
+
+    <img src="assets/images/logo.png" alt="José Manuel Logo" />
+
+    <!-- NAVIGATION BAR LIST -->
+    <ul class="nav-bar-list">
+      <li>
+        <a href="#">
+          <i class="fa-sharp fa-solid fa-house"></i>
+          <app-svg-icon [svgName]="'home'" />
+          Inicio
+        </a>
+      </li>
+      <li>
+        <a href="#about-me">
+          <app-svg-icon [svgName]="'info'" />
+          Sobre mí
+        </a>
+      </li>
+      <li>
+        <a href="#experience">
+          <app-svg-icon [svgName]="'briefcase'" />
+          Experiencia
+        </a>
+      </li>
+      <li>
+        <a href="#technologies">
+          <app-svg-icon [svgName]="'code'" />
+          Tecnologías
+        </a>
+      </li>
+      <li>
+        <a href="#education">
+          <app-svg-icon [svgName]="'book'" />
+          Formación
+        </a>
+      </li>
+      <li>
+        <a href="#curriculum">
+          <app-svg-icon [svgName]="'file'" />
+          Currículum
+        </a>
+      </li>
+      <li>
+        <a href="#contact">
+          <app-svg-icon [svgName]="'chat'" />
+          Contacto
+        </a>
+      </li>
+    </ul>
+    <!-- MENU BUTTON -->
+    <button class="menu-btn" aria-label="Menu Button" (click)="toggleMenu()">
+      @if(isMenuOpen) {
+      <app-svg-icon [svgName]="'close'" />
+      } @else {
+      <app-svg-icon [svgName]="'menu'" />
+      }
+    </button>
   </div>
-
-  <img src="assets/images/logo.png" alt="José Manuel Logo" />
-
-  <!-- NAVIGATION BAR LIST -->
-  <ul class="nav-bar-list">
-    <li>
-      <a href="#">
-        <i class="fa-sharp fa-solid fa-house"></i>
-        <app-svg-icon [svgName]="'home'" />
-        Inicio
-      </a>
-    </li>
-    <li>
-      <a href="#about-me">
-        <app-svg-icon [svgName]="'info'" />
-        Sobre mí
-      </a>
-    </li>
-    <li>
-      <a href="#experience">
-        <app-svg-icon [svgName]="'briefcase'" />
-        Experiencia
-      </a>
-    </li>
-    <li>
-      <a href="#technologies">
-        <app-svg-icon [svgName]="'code'" />
-        Tecnologías
-      </a>
-    </li>
-    <li>
-      <a href="#education">
-        <app-svg-icon [svgName]="'book'" />
-        Formación
-      </a>
-    </li>
-    <li>
-      <a href="#curriculum">
-        <app-svg-icon [svgName]="'file'" />
-        Currículum
-      </a>
-    </li>
-    <li>
-      <a href="#contact">
-        <app-svg-icon [svgName]="'chat'" />
-        Contacto
-      </a>
-    </li>
-  </ul>
-  <!-- MENU BUTTON -->
-  <button class="menu-btn" aria-label="Menu Button" (click)="toggleMenu()">
-    @if(isMenuOpen) {
-    <app-svg-icon [svgName]="'close'" />
-    } @else {
-    <app-svg-icon [svgName]="'menu'" />
-    }
-  </button>
 </nav>
 <!-- NAV DROP LIST -->
 @if(isMenuOpen) {

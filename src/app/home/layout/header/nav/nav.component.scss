@@ -2,13 +2,15 @@
 @import "src/app/assets/themes/breakpoints.scss";
 
 nav {
+  padding-block: 0rem;
+  background-color: $black;
+}
+
+.nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 4rem;
-  padding-inline: 4rem;
-  background-color: $black;
-  //opacity: 0.9;
 }
 
 img {
@@ -67,10 +69,6 @@ ul.nav-bar-list {
 }
 
 @media (max-width: $laptop-breakpoint) {
-  nav {
-    padding: 0 5rem;
-  }
-
   img {
     display: none;
   }
@@ -85,11 +83,5 @@ ul.nav-bar-list {
 
   .menu-btn {
     display: inline;
-  }
-}
-
-@media (max-width: $tablet-breakpoint) {
-  nav {
-    padding: 0 2rem;
   }
 }
