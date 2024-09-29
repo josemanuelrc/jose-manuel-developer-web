@@ -52,7 +52,11 @@
           }
         </div>
 
-        <button [disabled]="contactForm.invalid" (click)="sendEmail()">
+        <button
+          class="btn"
+          [disabled]="contactForm.invalid"
+          (click)="sendEmail()"
+        >
           Enviar
         </button>
       </form>

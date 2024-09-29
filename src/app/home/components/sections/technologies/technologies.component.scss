@@ -7,7 +7,7 @@ section#technologies {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
 
@@ -17,6 +17,7 @@ section#technologies {
     justify-content: flex-end;
     align-items: center;
     padding: 1rem;
+    border-radius: 0.25rem;
     background-color: $grey-12;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 

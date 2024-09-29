@@ -8,22 +8,6 @@ section#curriculum {
 .btn-container {
   display: flex;
   justify-content: center;
-
-  .btn-download {
-    cursor: pointer;
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: $grey-14;
-    background-color: $d-primary-color;
-    border-radius: 25px;
-    border: none;
-    transition: transform 0.2s ease-in-out;
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
 }
 
 #link {

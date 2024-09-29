@@ -11,6 +11,7 @@ import { EducationComponent } from './components/sections/education/education.co
 import { CurriculumComponent } from './components/sections/curriculum/curriculum.component';
 import { ContactComponent } from './components/sections/contact/contact.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { ToTopBtnComponent } from './layout/to-top-btn/to-top-btn.component';
 
 @Component({
   selector: 'app-home',
@@ -28,6 +29,7 @@ import { FooterComponent } from './layout/footer/footer.component';
     CurriculumComponent,
     ContactComponent,
     FooterComponent,
+    ToTopBtnComponent,
   ],
 })
 export class HomeComponent implements OnDestroy {

@@ -41,5 +41,10 @@
 @media (max-width: $mobile-sm-breakpoint) {
   .box-container {
     padding: 1rem;
+    .box-content {
+      .box-main-content {
+        padding-inline: 0.25rem;
+      }
+    }
   }
 }

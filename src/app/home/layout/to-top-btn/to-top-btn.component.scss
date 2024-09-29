@@ -1,0 +1,11 @@
+@import "./../../../assets/themes/themes.scss";
+
+.to-top-btn {
+  bottom: 2rem;
+  left: 2rem;
+  height: 2rem;
+  width: 2rem;
+  background-color: $white;
+  border: none;
+  border-radius: 50%;
+}

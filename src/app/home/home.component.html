@@ -1,5 +1,7 @@
 <div [ngClass]="theme">
-  <app-header></app-header>
+  <app-header />
+  <!-- <app-to-top-btn /> -->
+
   <main>
     <div class="video-container">
       @defer {
@@ -9,19 +11,21 @@
       </video>
       }
     </div>
-    <app-title></app-title>
-    <app-about-me></app-about-me>
+    <app-title />
+
     @defer {
-    <app-experience></app-experience>
+    <app-about-me />
     } @defer {
-    <app-technologies></app-technologies>
+    <app-experience />
     } @defer {
-    <app-education></app-education>
+    <app-technologies />
     } @defer {
-    <app-curriculum></app-curriculum>
+    <app-education />
     } @defer {
-    <app-contact></app-contact>
+    <app-curriculum />
+    } @defer {
+    <app-contact />
     }
   </main>
-  <app-footer></app-footer>
+  @defer {<app-footer></app-footer>}
 </div>
