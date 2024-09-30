@@ -2,7 +2,7 @@
 @import "src/app/assets/themes/breakpoints.scss";
 
 section#experience {
-  background: rgba($d-primary-dark-color, 0.7);
+  background: rgba($grey-14, 0.7);
 }
 
 .description {
@@ -13,18 +13,14 @@ section#experience {
   display: inline-block;
   padding: 0.3em 0.8em;
   margin: 0.25rem;
-  background-color: $grey-01;
+  color: $grey-01;
+  background-color: $grey-11;
   border-radius: 1rem;
   font-size: 0.75rem;
   font-weight: bold;
-  color: $grey-13;
   text-align: center;
   border: 1px solid transparent;
   transition: background-color 0.3s ease, border-color 0.3s ease;
-  :hover {
-    background-color: $grey-03;
-    border-color: $grey-02;
-  }
 }
 
 @media (max-width: $mobile-breakpoint) {

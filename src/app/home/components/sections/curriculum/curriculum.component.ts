@@ -7,7 +7,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   standalone: true,
 })
 export class CurriculumComponent {
-  @ViewChild('link', { static: false }) link: ElementRef | undefined;
+  @ViewChild('link') link: ElementRef | undefined;
 
   downloadFile() {
     this.link?.nativeElement.click();
