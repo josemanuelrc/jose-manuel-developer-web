@@ -53,7 +53,11 @@
       </li>
     </ul>
     <!-- MENU BUTTON -->
-    <button class="menu-btn" aria-label="Menu Button" (click)="toggleMenu()">
+    <button
+      class="menu-btn"
+      aria-label="Menu Button"
+      (click)="toggleMenu($event)"
+    >
       @if(isMenuOpen) {
       <app-svg-icon [svgName]="'close'" />
       } @else {
@@ -63,6 +67,9 @@
   </div>
 </nav>
 <!-- NAV DROP LIST -->
-@if(isMenuOpen) {
+<!-- @if(isMenuOpen) {
 <app-nav-drop [(isMenuOpen)]="isMenuOpen" />
-}
+} -->
+<div [@toggleMenu]="isMenuOpen ? 'open' : 'closed'">
+  <app-nav-drop [(isMenuOpen)]="isMenuOpen"></app-nav-drop>
+</div>

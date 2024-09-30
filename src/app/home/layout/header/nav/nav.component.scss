@@ -2,6 +2,8 @@
 @import "src/app/assets/themes/breakpoints.scss";
 
 nav {
+  position: relative;
+  z-index: 6;
   padding-block: 0rem;
   background-color: $black;
 }

@@ -1,0 +1,35 @@
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.cursor-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: rgb(13, 176, 103);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgb(13, 176, 103);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+}
+
+.cursor-circle {
+  position: absolute;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Centraliza ambas figuras en el mismo punto */
+}
