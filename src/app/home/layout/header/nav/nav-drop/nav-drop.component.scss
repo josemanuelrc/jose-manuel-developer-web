@@ -55,3 +55,27 @@
     }
   }
 }
+
+@media (max-width: $mobile-breakpoint) {
+  .nav-drop-list {
+    ul {
+      li {
+        a {
+          padding-inline: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-sm-breakpoint) {
+  .nav-drop-list {
+    ul {
+      li {
+        a {
+          padding-inline: 1rem;
+        }
+      }
+    }
+  }
+}
