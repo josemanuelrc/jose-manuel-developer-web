@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { fadeInLeft } from 'src/app/assets/animations/animations';
 
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.scss'],
   standalone: true,
+  animations: [fadeInLeft],
 })
 export class EducationComponent {
   titles: TitleItem[] = [
@@ -18,9 +20,9 @@ export class EducationComponent {
       title: 'Bachillerato Bilingüe, Ciencias y Tecnologías',
       period: '2014 - 2016',
       institution: 'I.E.S. Catedrático Pulido Rubio',
-      description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Illum eius blanditiis dolorum reprehenderit asperiores 
-                    pariatur, non libero aspernatur omnis. Dolores quod cum 
+      description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Illum eius blanditiis dolorum reprehenderit asperiores
+                    pariatur, non libero aspernatur omnis. Dolores quod cum
                     delectus eligendi qui nobis commodi nesciunt voluptas sit.`,
     },
   ];
@@ -42,14 +44,14 @@ export class EducationComponent {
 
   languages = [
     {
-      name: 'Inglés',
-      level: 'C1',
-      description: 'Competente en comunicación verbal y escrita.',
+      name: 'Español',
+      level: 'Nativo',
+      description: 'Idioma ',
     },
     {
-      name: 'Francés',
+      name: 'Inglés',
       level: 'B2',
-      description: 'Buena comprensión y expresión escrita.',
+      description: 'Competente en comunicación verbal y escrita.',
     },
   ];
 }

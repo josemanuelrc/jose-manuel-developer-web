@@ -5,10 +5,12 @@
     <div class="box-main-content">
       <ul>
         @for(experience of experiences; track $index) {
+
         <li class="timeline-item">
           <h4 class="timeline-item-title">{{ experience.title }}</h4>
           <h5>{{ experience.period }} | {{ experience.company }}</h5>
-          <div class="description">
+          @defer(on viewport) {
+          <div class="description" [@fadeInLeft]>
             @for( parragraf of experience.description; track $index){
             <p>{{ parragraf }}</p>
             }
@@ -19,6 +21,9 @@
             </span>
             }
           </div>
+          } @placeholder {
+          <span></span>
+          }
         </li>
         }
       </ul>

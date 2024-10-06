@@ -3,8 +3,10 @@
     <h3>Sobre Mí</h3>
     <hr />
     <div class="box-main-content about-me-container">
+      @defer (on viewport) {
       <img src="assets/images/desktop.png" alt="A computer in a Desktop" />
-      <div>
+
+      <div [@fadeInLeft]>
         <p>
           <strong>Desarrollador Web Full-Stack</strong> con más de
           <strong>2 años de experiencia</strong> y amplios conocimientos en
@@ -24,6 +26,9 @@
           creciendo profesionalmente.
         </p>
       </div>
+      } @placeholder {
+      <span></span>
+      }
     </div>
   </article>
 </section>

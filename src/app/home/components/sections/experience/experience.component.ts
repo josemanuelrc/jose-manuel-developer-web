@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { fadeInLeft } from 'src/app/assets/animations/animations';
 
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss'],
   standalone: true,
+  animations: [fadeInLeft],
 })
 export class ExperienceComponent {
   experiences: Experience[] = [

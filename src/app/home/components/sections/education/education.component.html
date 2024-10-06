@@ -11,9 +11,11 @@
           <h5 class="timeline-item-period">
             {{ title.period }} | {{ title.institution }}
           </h5>
-          <div class="description">
+          @defer(on viewport) {
+          <div class="description" [@fadeInLeft]>
             <p>{{ title.description }}</p>
           </div>
+          } @placeholder {<span></span>}
         </li>
         }
       </ul>
@@ -26,9 +28,11 @@
           <h5 class="timeline-item-period">
             {{ course.period }} | {{ course.institution }}
           </h5>
-          <div class="description">
+          @defer(on viewport) {
+          <div class="description" [@fadeInLeft]>
             <p>{{ course.description }}</p>
           </div>
+          } @placeholder {<span></span>}
         </li>
         }
       </ul>
@@ -38,9 +42,11 @@
         <li class="timeline-item">
           <h4 class="timeline-item-title">{{ language.name }}</h4>
           <h5 class="timeline-item-level">Nivel: {{ language.level }}</h5>
-          <div class="description">
+          @defer(on viewport) {
+          <div class="description" [@fadeInLeft]>
             <p>{{ language.description }}</p>
           </div>
+          } @placeholder {<span></span>}
         </li>
         }
       </ul>
