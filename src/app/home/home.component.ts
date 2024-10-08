@@ -1,4 +1,11 @@
-import { Component, OnDestroy, inject } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnDestroy,
+  ViewChild,
+  inject,
+  AfterViewInit,
+} from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ThemeService } from '../services/theme.service';
 import { NgClass } from '@angular/common';
@@ -32,7 +39,9 @@ import { ToTopBtnComponent } from './layout/to-top-btn/to-top-btn.component';
     ToTopBtnComponent,
   ],
 })
-export class HomeComponent implements OnDestroy {
+export class HomeComponent implements OnDestroy, AfterViewInit {
+  @ViewChild('videoElement') videoElement!: ElementRef;
+
   private themeService = inject(ThemeService);
 
   // Web Theme
@@ -40,13 +49,19 @@ export class HomeComponent implements OnDestroy {
   // Web Theme Subscription
   private themeSubscription: Subscription;
 
-  /** Inserted by Angular inject() migration for backwards compatibility */
-  constructor(...args: unknown[]);
-
   constructor() {
     this.themeSubscription = this.themeService
       .getTheme$()
       .subscribe((theme) => (this.theme = theme));
+  }
+
+  ngAfterViewInit(): void {
+    const video: HTMLVideoElement = this.videoElement.nativeElement;
+    // Intenta reproducir automáticamente
+    video.muted = true; //Necesario, si no, no se repoduce
+    video.play().catch((error) => {
+      console.log('El vídeo no pudo reproducirse automáticamente:', error);
+    });
   }
 
   ngOnDestroy(): void {

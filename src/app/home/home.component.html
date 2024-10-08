@@ -3,10 +3,16 @@
   <app-to-top-btn />
 
   <main>
-    <video muted loop poster="assets/images/background-picture.png">
+    <video
+      #videoElement
+      autoplay
+      loop
+      poster="assets/images/background-picture.jpg"
+    >
       <source src="assets/video/background.mp4" type="video/mp4" />
       Tu navegador no soporta la etiqueta de video.
     </video>
+
     <app-title />
 
     @defer {
