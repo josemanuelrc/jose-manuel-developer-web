@@ -10,60 +10,60 @@ html {
 }
 
 body {
-  cursor: none;
 }
 
+/* Estilos para títulos comunes */
 h1,
+h2,
+h3,
+h4,
 h5 {
   font-family: "PoiretOne", sans-serif;
+  transition: font-size 0.2s ease-in-out;
+  &::selection {
+    background: $grey-06;
+  }
+}
+
+/* Color y selección específicos por encabezado */
+h1,
+h5 {
   color: $white;
-  &::selection {
-    background: $grey-06;
-  }
 }
 
-h2 {
-  font-family: "PoiretOne", sans-serif;
-  color: $d-primary-color;
-  &::selection {
-    color: $white;
-    background: $grey-06;
-  }
-}
-
+h2,
 h3,
 h4 {
-  font-family: "PoiretOne", sans-serif;
   color: $d-primary-color;
   &::selection {
     color: $white;
-    background: $grey-06;
   }
 }
 
+/* Tamaño y márgenes específicos por encabezado */
 h1 {
   font-size: 3.5rem;
-  margin: 1.5rem 0rem;
+  margin: 1.5rem 0;
 }
 
 h2 {
   font-size: 3rem;
-  margin: 1.5rem 0rem;
+  margin: 1.5rem 0;
 }
 
 h3 {
   font-size: 1.75rem;
-  margin: 1.5rem 0rem;
+  margin: 1.5rem 0;
 }
 
 h4 {
   font-size: 1.5rem;
-  margin: 1rem 0rem;
+  margin: 1rem 0;
 }
 
 h5 {
   font-size: 1.25rem;
-  margin: 1rem 0rem;
+  margin: 1rem 0;
 }
 
 p,
@@ -109,4 +109,22 @@ ul {
 
 hr {
   margin-bottom: 2.5rem;
+}
+
+@media (max-width: $tablet-breakpoint) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
 }

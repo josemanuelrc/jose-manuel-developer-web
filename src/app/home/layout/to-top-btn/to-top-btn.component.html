@@ -1,4 +1,9 @@
-<button class="to-top-btn" (click)="scrollToTop()">
+<button
+  class="to-top-btn"
+  name="toTopButton"
+  aria-label="To Top Button"
+  (click)="scrollToTop()"
+>
   <app-svg-icon [svgName]="'arrow-up'" [svgColor]="'black'" />
 </button>
 <a #linkToTop href="#">Link OCULTO</a>

@@ -8,9 +8,11 @@
           <label for="name">Nombre: * </label>
           <input
             type="text"
+            id="name"
             name="name"
             formControlName="name"
             placeholder="Introduce tu nombre"
+            autocomplete="given-name"
             (blur)="isFieldInvalid('name')"
           />
           @if(isFieldInvalid('name')) {
@@ -24,9 +26,11 @@
           <label for="email">Email: * </label>
           <input
             type="email"
+            id="email"
             name="email"
             formControlName="email"
             placeholder="Introduce tu email"
+            autocomplete="email"
             (blur)="isFieldInvalid('email')"
           />
           @if(isFieldInvalid('email')) {
@@ -43,6 +47,7 @@
             name="message"
             formControlName="message"
             placeholder="Escribe tu mensaje"
+            autocomplete="email"
             (blur)="isFieldInvalid('message')"
           ></textarea>
           @if(isFieldInvalid('message')) {

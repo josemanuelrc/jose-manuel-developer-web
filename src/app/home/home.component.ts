@@ -55,7 +55,7 @@ export class HomeComponent implements OnDestroy, AfterViewInit {
       .subscribe((theme) => (this.theme = theme));
   }
 
-  ngAfterViewInit(): void {
+  ngAfterViewInit() {
     const video: HTMLVideoElement = this.videoElement.nativeElement;
     // Intenta reproducir automáticamente
     video.muted = true; //Necesario, si no, no se repoduce
@@ -64,7 +64,7 @@ export class HomeComponent implements OnDestroy, AfterViewInit {
     });
   }
 
-  ngOnDestroy(): void {
+  ngOnDestroy() {
     this.themeSubscription.unsubscribe();
   }
 }
