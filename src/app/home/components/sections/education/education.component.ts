@@ -14,31 +14,76 @@ export class EducationComponent {
       title: 'Grado en Ingeniería Informática',
       period: '2016 - 2021',
       institution: 'Universidad de Huelva',
-      description: 'T.F.G.: Arquitectura de Computador basada en Acumulador',
+      description:
+        'Ingeniero Informático con Especialidad en Ingenieria de Computadores por \
+        la E.T.S.I. de la Universidad de Huelva \n T.F.G.: Arquitectura de Computador \
+        basada en Acumulador',
     },
     {
-      title: 'Bachillerato Bilingüe, Ciencias y Tecnologías',
+      title: 'Bachillerato en Ciencias y Tecnologías',
       period: '2014 - 2016',
       institution: 'I.E.S. Catedrático Pulido Rubio',
-      description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Illum eius blanditiis dolorum reprehenderit asperiores
-                    pariatur, non libero aspernatur omnis. Dolores quod cum
-                    delectus eligendi qui nobis commodi nesciunt voluptas sit.`,
+      description: `Título Bachiller en Ciencias y Tecnologías; Grupo bilingüe`,
     },
   ];
 
   courses: CourseItem[] = [
     {
-      title: 'Curso de Angular',
-      period: '2022',
-      institution: 'Academia XYZ',
-      description: 'Descripción del curso.',
+      title: 'ITIL® v4',
+      period: '2024',
+      institution: 'PeopleCert',
+      description:
+        'Certificación ITIL, marco de buenas prácticas para la gestión de servicios\
+         de TI',
     },
     {
-      title: 'Curso de React',
+      title: 'Amazon Web Services: Cloud Practicioner',
+      period: '2024',
+      institution: 'Soltel Group',
+      description:
+        'Curso preparatorio para cetificación oficial del proveedor de servicios en \
+        la nube',
+    },
+    {
+      title: 'Introducción a MongoDB',
+      period: '2024',
+      institution: 'Soltel Group',
+      description:
+        'Curso de MongoDB, base de datos NoSQL orientado a documentos',
+    },
+    {
+      title: 'Scrum Foundation Professional Certificate SFPC v2020',
       period: '2023',
-      institution: 'Academia ABC',
-      description: 'Descripción del curso.',
+      institution: 'CertiProf',
+      description:
+        'Certificación en Scrum, marco de gestión de proyectos de metodologías ágiles',
+    },
+    {
+      title: 'Desarrollo de Aplicaciones con Spring',
+      period: '2022',
+      institution: 'Ayesa',
+      description:
+        'Curso de desarrollo de aplicaciones web backend con Java y Spring Framework',
+    },
+    {
+      title: 'Angular - The Complete Guide',
+      period: '2021',
+      institution: 'Udemy',
+      description:
+        'Curso de desarrollo de aplicaciones web frontend con Angular',
+    },
+    {
+      title: 'NestJS - Desarrollo Backend Moderno con TypeScript',
+      period: '2021',
+      institution: 'Udemy',
+      description:
+        'Curso de desarrollo de aplicaciones web backend con Nest.js',
+    },
+    {
+      title: 'Javascript Basics for Begginners',
+      period: '2021',
+      institution: 'Udemy',
+      description: 'Curso de introducción al desarrollo con JavaScript',
     },
   ];
 
@@ -46,12 +91,12 @@ export class EducationComponent {
     {
       name: 'Español',
       level: 'Nativo',
-      description: 'Idioma ',
+      description: 'Idioma nativo',
     },
     {
       name: 'Inglés',
       level: 'B2',
-      description: 'Competente en comunicación verbal y escrita.',
+      description: 'Aptis ESOL Advanced',
     },
   ];
 }

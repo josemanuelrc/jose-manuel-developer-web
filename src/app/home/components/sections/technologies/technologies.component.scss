@@ -7,7 +7,7 @@ section#technologies {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
 
@@ -19,11 +19,9 @@ section#technologies {
     padding: 1rem;
     border-radius: 0.25rem;
     background-color: $grey-12;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-
+    transition: transform 0.2s ease-in-out;
     &:hover {
-      cursor: pointer;
-      transform: translateY(-5px);
+      transform: scale(1.1);
     }
   }
 }
