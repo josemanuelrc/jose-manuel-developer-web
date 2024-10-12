@@ -3,28 +3,23 @@
     <h3>Currículum Vitae</h3>
     <hr />
     <div class="box-main-content">
-      <p>
-        ¿Te interesa saber más sobre mi? Descarga mi CV y explora mis
-        habilidades, proyectos y logros profesionales ¡No dudes en contactarme!
-      </p>
-      <embed
-        src="assets/documents/curriculum.pdf"
-        type="application/pdf"
-        width="100%"
-        height="600px"
-      />
+      <div class="cv-container">
+        <img src="assets/images/cv-header.png" alt="Currículum Image" />
 
-      <div class="btn-container">
-        <button class="btn" (click)="downloadFile()">Descargar CV</button>
-        <a
-          #link
-          id="link"
-          href="assets/documents/curriculum.pdf"
-          download="curriculum.pdf"
-          name="Descargar Currículum"
-        >
-          Link -OCULTO-
-        </a>
+        <div class="download-container">
+          <p>¿Te interesa saber más sobre mi?</p>
+          <p>¡Descarga mi CV y no dudes en contactarme!</p>
+          <button class="btn" (click)="downloadFile()">Descargar CV</button>
+          <a
+            #link
+            id="link"
+            href="assets/documents/curriculum.pdf"
+            download="curriculum.pdf"
+            name="Descargar Currículum"
+          >
+            Link -OCULTO-
+          </a>
+        </div>
       </div>
     </div>
   </article>
