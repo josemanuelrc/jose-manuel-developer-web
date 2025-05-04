@@ -3,11 +3,11 @@ import { fadeInLeft } from 'src/app/assets/animations/animations';
 import { ScrollSpyDirective } from 'src/app/core/directives/ScrollSpy.directive';
 
 @Component({
-    selector: 'app-experience',
-    templateUrl: './experience.component.html',
-    styleUrls: ['./experience.component.scss'],
-    animations: [fadeInLeft],
-    imports: [ScrollSpyDirective]
+  selector: 'app-experience',
+  templateUrl: './experience.component.html',
+  styleUrls: ['./experience.component.scss'],
+  animations: [fadeInLeft],
+  imports: [ScrollSpyDirective],
 })
 export class ExperienceComponent {
   experiences: Experience[] = [
@@ -16,7 +16,22 @@ export class ExperienceComponent {
       company: 'Centro de Observación y Teledetección Espacial (COTESA)',
       period: '2024 - Actualidad',
       description: [
-        '• Diseño y Desarrollo de nueva versión del Sistema de Información de la Red de Carreteras de Andalucía (CONSICA).',
+        '• Diseño y desarrollo de nueva versión del Sistema de Información de la Red de Carreteras de Andalucía (CONSICA).',
+        '• Coordinación de tareas y liderazgo técnico en el equipo de FrontEnd',
+        '• Definición de la arquitectura del sistema y toma de decisiones',
+        '• Diseño y prototipado de la interfaz de usuario',
+        '• Implemetación de componentes, pantallas y nuevas funcionalidades',
+        '• Despliegue e integración de servicios y APIs',
+      ],
+      technologies: [
+        'HTML',
+        'SCSS',
+        'TypeScript',
+        'Angular',
+        'RxJs',
+        'NgRx',
+        'Git',
+        'GitLab',
       ],
     },
     {
@@ -24,7 +39,11 @@ export class ExperienceComponent {
       company: 'TEMPE Inditex',
       period: '2024 - 2024',
       description: [
-        '• Diseño y Desarrollo de Sistema de Gestión de referencias e inventario.',
+        '• Diseño y desarrollo de sistema para la gestión de referencias e inventario, dentro de una arquitectura de microservicios.',
+        '• Análisis y definición de requisitos técnicos',
+        '• Implementación de servicios RESTful y gestión de bases de datos.',
+        '• Participación en la creación de documentación técnica y funcional.',
+        '• Elaboración de pruebas unitarias e intgración',
       ],
       technologies: [
         'Java',
@@ -43,19 +62,11 @@ export class ExperienceComponent {
       company: 'SOLTEL Group',
       period: '2023 - 2024',
       description: [
-        '• Diseño y Desarrollo de Portal Web para Datalake de IFAPA - Catálogo de Datos Científicos Abierto.',
-        '• Entre mis funciones residen la toma de los distintos requerimientos, el diseño y análisis de la \
-        mejor solución a aplicar y la posterior implementación de las funcionalidades requeridas en las \
-        diversas pantallas del portal.',
-        '• Ejerzo de responsable FrontEnd, velando por que se sigan las mejores prácticas posibles, tal como \
-        Clean Code, SOLID, etc... manteniendo en todo momento un código altamente escalable y eficiente.',
-        '• Eventualmente ostento el rol de Scrum Master, coordinando algunas reuniones: dailys, retrospectivas \
-        y plannings de las tareas a realizar en los sprints',
-        '• También suelo colaborar activamente con el equipo de BackEnd para lograr un mayor entendimiento \
-        del dominio del problema y aportar ideas y soluciones efectivas entre ambos.',
-        '• Docencia como profesor en curso de desarrollo web y dispositivos móviles, como parte del plan \
-        INNOVA, impartiendo el módulo de Angular (Componentes, Directivas, Módulos, Observables, etc... ) \
-        y Spring (API REST, Maven, JPA/Hibernate, MySQL, etc...)',
+        '• Desarrollo del Portal Web para el Datalake de IFAPA - Catálogo de Datos Científicos Abierto.',
+        '• Participación en análisis funcional y técnico, implementación de interfaces, documentación y toma de decisiones de arquitectura FrontEnd.',
+        '• Liderazgo técnico en FrontEnd, promoviendo buenas prácticas (Clean Code, SOLID) y calidad del código.',
+        '• Rol ocasional de Scrum Master, facilitando reuniones ágiles (dailys, plannings, retrospectivas).',
+        '• Docencia en módulo de desarrollo web (Angular y Spring) en el marco del plan INNOVA.',
       ],
       technologies: [
         'HTML',
@@ -83,17 +94,10 @@ export class ExperienceComponent {
       company: 'Ayesa Advanced Technologies',
       period: '2022 - 2023',
       description: [
-        '• Diseño y Desarrollo de Simulador de Ejecución Presupuestaria (SEPRE) para la Junta de Andalucía \
-        como parte del proyecto GOTA.',
-        '• Entre mis responsabilidades se hallaban el desarrollo integral de las funcionalidades requeridas, \
-        incluidas todas las fases del proceso, tanto en el Backend como en el FrontEnd, ejecutando la solución \
-        bajo una arquitectura de micro-servicios que incluía un BFF en conjunto con una basada en Angular para \
-        el FrontEnd.',
-        '• A destacar, entre otras tareas: análisis de requisitos y propuesta de soluciones, modelado y \
-        normalización de la bases de datos, desarrollo y documentación de lógica de negocio necesaria, extracción \
-        de grandes cantidades de datos de archivos estaticos, creación, testeo y consumo de los distintos endpoints de los \
-        microservicios, maquetación y creación de componentes, pantallas, etc...',
-        '• Como parte de mi formación, realice sendos cursos sobre Angular y Spring',
+        '• Participación en el desarrollo del Simulador de Ejecución Presupuestaria (SEPRE) para la Junta de Andalucía.',
+        '• Desarrollo de funcionalidades completas en FrontEnd y Backend sobre arquitectura de microservicios.',
+        '• Diseño de modelo de datos, lógica de negocio, endpoints REST y creación de componentes en Angular.',
+        '• Extracción y tratamiento de grandes volúmenes de datos desde archivos estáticos.',
       ],
       technologies: [
         'HTML',
@@ -123,7 +127,8 @@ export class ExperienceComponent {
       company: 'SGRSoft',
       period: '2022 - 2022',
       description: [
-        '• Diseño y Desarrollo de aplicación de registro horario en entorno .NET.',
+        '• Desarrollo de aplicación de control horario utilizando tecnologías .NET y base de datos SQL Server.',
+        '• Participación en mantenimiento evolutivo y correctivo del sistema existente.',
       ],
       technologies: ['C#', '.NET Core', '.NET Framework', 'SQL', 'SQLServer'],
     },
@@ -132,8 +137,8 @@ export class ExperienceComponent {
       company: 'Chapham Software Studio',
       period: '2021 - 2021',
       description: [
-        '• Desarrollo de aplicación web para gestión de empresas hortofrutícolas.',
-        '• Formación en diversas tecnologias web (Frontend y Backend)',
+        '• Desarrollo de aplicación web para la gestión de empresas hortofrutícolas.',
+        '• Formación práctica en tecnologías web (Angular, Node.js, Spring, PostgreSQL).',
       ],
       technologies: [
         'HTML',
