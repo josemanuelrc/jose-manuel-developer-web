@@ -1,5 +1,5 @@
-@import "src/app/assets/themes/themes.scss";
-@import "src/app/assets/themes/breakpoints.scss";
+@use "src/app/assets/themes/themes.scss" as *;
+@use "src/app/assets/themes/breakpoints.scss" as *;
 
 nav {
   position: relative;

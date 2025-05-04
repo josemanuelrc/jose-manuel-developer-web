@@ -3,11 +3,19 @@ import { RouterModule, Routes } from '@angular/router';
 
 /* COMPONENTS */
 
-
-
 const routes: Routes = [
-  { path: '', loadComponent: () => import('./home/home.component').then(m => m.HomeComponent), pathMatch: 'full' },
-  { path: '**', loadComponent: () => import('./home/home.component').then(m => m.HomeComponent), pathMatch: 'full' },
+  {
+    path: '',
+    loadComponent: () =>
+      import('./home/home.component').then((m) => m.HomeComponent),
+    pathMatch: 'full',
+  },
+  {
+    path: '**',
+    loadComponent: () =>
+      import('./home/home.component').then((m) => m.HomeComponent),
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

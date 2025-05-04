@@ -1,4 +1,4 @@
-@import "./../assets/themes/themes.scss";
+@use "./../assets/themes/themes.scss" as *;
 
 main {
   //background-color: $grey-13;

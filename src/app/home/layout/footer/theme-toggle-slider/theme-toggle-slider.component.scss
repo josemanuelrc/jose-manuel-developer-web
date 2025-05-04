@@ -1,4 +1,4 @@
-@import "./../../../../assets/themes/themes.scss";
+@use "./../../../../assets/themes/themes.scss" as *;
 
 /* The switch - the box around the slider */
 .switch {
