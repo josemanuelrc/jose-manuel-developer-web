@@ -13,6 +13,14 @@ import { ScrollSpyDirective } from 'src/app/core/directives/ScrollSpy.directive'
 export class ExperienceComponent {
   experiences: Experience[] = [
     {
+      title: 'Desarrollador FrontEnd',
+      company: 'Centro de Observación y Teledetección Espacial (COTESA)',
+      period: '2024 - Actualidad',
+      description: [
+        '• Diseño y Desarrollo de nueva versión del Sistema de Información de la Red de Carreteras de Andalucía (CONSICA).',
+      ],
+    },
+    {
       title: 'Desarrollador Backend',
       company: 'TEMPE Inditex',
       period: '2024 - 2024',
