@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { fadeInLeft } from 'src/app/assets/animations/animations';
+import { ScrollSpyDirective } from 'src/app/core/directives/ScrollSpy.directive';
 
 @Component({
   selector: 'app-experience',
@@ -7,6 +8,7 @@ import { fadeInLeft } from 'src/app/assets/animations/animations';
   styleUrls: ['./experience.component.scss'],
   standalone: true,
   animations: [fadeInLeft],
+  imports: [ScrollSpyDirective],
 })
 export class ExperienceComponent {
   experiences: Experience[] = [

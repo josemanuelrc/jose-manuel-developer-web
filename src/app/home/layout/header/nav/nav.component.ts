@@ -15,13 +15,15 @@ import {
   animate,
   transition,
 } from '@angular/animations';
+import { ScrollSpyService } from 'src/app/core/services/scrollSpy.service';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
   standalone: true,
-  imports: [SvgIconComponent, NavDropComponent],
+  imports: [SvgIconComponent, NavDropComponent, AsyncPipe],
   animations: [
     trigger('toggleMenu', [
       state(
@@ -46,8 +48,20 @@ export class NavComponent implements OnInit {
   @ViewChild('navDropList') navDropList: ElementRef | undefined;
   @ViewChild('navBar') navBar: ElementRef | undefined;
 
+  navItems: NavItem[] = [
+    { label: 'Inicio', href: '#', icon: 'home' },
+    { label: 'Sobre mí', href: '#about-me', icon: 'info' },
+    { label: 'Experiencia', href: '#experience', icon: 'briefcase' },
+    { label: 'Tecnologías', href: '#technologies', icon: 'code' },
+    { label: 'Formación', href: '#education', icon: 'book' },
+    { label: 'Currículum', href: '#curriculum', icon: 'file' },
+    { label: 'Contacto', href: '#contact', icon: 'chat' },
+  ];
+
   isMenuOpen = false;
   private elRef = inject(ElementRef);
+
+  scrollSpy: ScrollSpyService = inject(ScrollSpyService);
 
   ngOnInit() {
     this.onResize(); // Verifica el tamaño inicial
@@ -77,4 +91,10 @@ export class NavComponent implements OnInit {
       this.isMenuOpen = false; // Cierra el menú si el clic es fuera del nav
     }
   }
+}
+
+interface NavItem {
+  label: string;
+  href: string;
+  icon: string;
 }

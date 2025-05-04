@@ -36,13 +36,7 @@ ul.nav-bar-list {
     display: flex;
     align-items: center;
     height: 100%;
-    transition: 0.2s ease-in-out;
-
-    :hover {
-      transition: 0.2s ease-in-out;
-      background-color: $white;
-      color: $black;
-    }
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
     a {
       display: flex;
@@ -50,10 +44,17 @@ ul.nav-bar-list {
       padding-inline: 0.5rem;
       height: 100%;
       color: $white;
+      transition: font-weight 0.2s ease-in-out;
+    }
 
-      &:hover {
-        transition: 0.2s ease-in-out;
+    &.active,
+    &:hover {
+      background-color: $white;
+      color: $black;
+
+      a {
         font-weight: bold;
+        color: $black;
       }
     }
   }

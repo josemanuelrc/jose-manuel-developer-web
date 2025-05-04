@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { fadeInLeft } from 'src/app/assets/animations/animations';
+import { ScrollSpyDirective } from 'src/app/core/directives/ScrollSpy.directive';
 
 @Component({
   selector: 'app-education',
@@ -7,6 +8,7 @@ import { fadeInLeft } from 'src/app/assets/animations/animations';
   styleUrls: ['./education.component.scss'],
   standalone: true,
   animations: [fadeInLeft],
+  imports: [ScrollSpyDirective],
 })
 export class EducationComponent {
   titles: TitleItem[] = [
