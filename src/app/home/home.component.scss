@@ -1,29 +1,13 @@
 @import "./../assets/themes/themes.scss";
 
 main {
-  //background-color: $d-secondary-light-color;
-  //background-color: white;
+  //background-color: $grey-13;
   position: relative;
-}
-
-// //Tema Claro
-// div.light-theme {
-//   color: $black;
-//   background-color: $white;
-//   transition: background-color 0.5s ease;
-// }
-
-// // Tema Oscuro
-// div.dark-theme {
-//   color: $white;
-//   background-color: $grey-13;
-//   transition: background-color 0.5s ease;
-// }
-
-video {
-  position: fixed;
-  width: 100%;
   min-height: 100vh;
-  object-fit: cover;
-  z-index: -1;
+  background-image: url("src/assets/images/background-picture.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; // <- esto la fija al hacer scroll
+  z-index: 0;
 }
