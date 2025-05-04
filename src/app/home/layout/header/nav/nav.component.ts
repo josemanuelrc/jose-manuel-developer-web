@@ -6,7 +6,6 @@ import {
   HostListener,
   inject,
 } from '@angular/core';
-import { NgClass } from '@angular/common';
 import { SvgIconComponent } from 'src/app/home/components/svg-icon/svg-icon.component';
 import { NavDropComponent } from './nav-drop/nav-drop.component';
 import {
@@ -22,7 +21,7 @@ import {
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
   standalone: true,
-  imports: [NgClass, SvgIconComponent, NavDropComponent],
+  imports: [SvgIconComponent, NavDropComponent],
   animations: [
     trigger('toggleMenu', [
       state(

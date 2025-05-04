@@ -41,7 +41,6 @@ ul.nav-bar-list {
     :hover {
       transition: 0.2s ease-in-out;
       background-color: $white;
-      font-weight: bold;
       color: $black;
     }
 
@@ -53,8 +52,8 @@ ul.nav-bar-list {
       color: $white;
 
       &:hover {
-        transition: 0.6s ease-in-out;
-        font-size: 1.4rem;
+        transition: 0.2s ease-in-out;
+        font-weight: bold;
       }
     }
   }
