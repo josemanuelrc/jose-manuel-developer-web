@@ -1,15 +1,21 @@
+<!-- Sección del currículum -->
 <section id="curriculum" class="box-container">
+  <!-- Contenido del currículum -->
   <article class="box-content">
     <h3>Currículum Vitae</h3>
     <hr />
     <div class="box-main-content">
       <div class="cv-container">
+        <!-- Imagen del encabezado del currículum -->
         <img src="assets/images/cv-header.png" alt="Currículum Image" />
 
+        <!-- Contenedor de descarga -->
         <div class="download-container">
           <p>¿Te interesa saber más sobre mi?</p>
           <p>¡Descarga mi CV y no dudes en contactarme!</p>
+          <!-- Botón para descargar el CV -->
           <button class="btn" (click)="downloadFile()">Descargar CV</button>
+          <!-- Enlace oculto para descargar el CV -->
           <a
             #link
             id="link"
