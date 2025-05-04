@@ -5,7 +5,6 @@ import { SvgIconComponent } from '../../components/svg-icon/svg-icon.component';
   selector: 'app-to-top-btn',
   templateUrl: './to-top-btn.component.html',
   styleUrls: ['./to-top-btn.component.scss'],
-  standalone: true,
   imports: [SvgIconComponent],
 })
 export class ToTopBtnComponent {

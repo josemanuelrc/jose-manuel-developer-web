@@ -1,5 +1,5 @@
-@import "./../../../assets/themes/themes.scss";
-@import "./../../../assets/themes/breakpoints.scss";
+@use "./../../../assets/themes/themes.scss" as *;
+@use "./../../../assets/themes/breakpoints.scss" as *;
 
 .to-top-btn {
   position: fixed;

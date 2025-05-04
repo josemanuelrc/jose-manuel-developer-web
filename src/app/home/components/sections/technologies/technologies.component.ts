@@ -3,11 +3,10 @@ import { SvgIconComponent } from '../../svg-icon/svg-icon.component';
 import { ScrollSpyDirective } from 'src/app/core/directives/ScrollSpy.directive';
 
 @Component({
-  selector: 'app-technologies',
-  templateUrl: './technologies.component.html',
-  styleUrls: ['./technologies.component.scss'],
-  standalone: true,
-  imports: [SvgIconComponent, ScrollSpyDirective],
+    selector: 'app-technologies',
+    templateUrl: './technologies.component.html',
+    styleUrls: ['./technologies.component.scss'],
+    imports: [SvgIconComponent, ScrollSpyDirective]
 })
 export class TechnologiesComponent {
   technologies = [

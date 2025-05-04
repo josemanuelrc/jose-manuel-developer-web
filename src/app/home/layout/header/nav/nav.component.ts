@@ -19,30 +19,23 @@ import { ScrollSpyService } from 'src/app/core/services/scrollSpy.service';
 import { AsyncPipe } from '@angular/common';
 
 @Component({
-  selector: 'app-nav',
-  templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss'],
-  standalone: true,
-  imports: [SvgIconComponent, NavDropComponent, AsyncPipe],
-  animations: [
-    trigger('toggleMenu', [
-      state(
-        'open',
-        style({
-          transform: 'translateY(0)',
-        })
-      ),
-      state(
-        'closed',
-        style({
-          transform: 'translateY(-400px)',
-        })
-      ),
-      transition('open <=> closed', [
-        animate('300ms ease-in-out'), // Duración y curva de animación
-      ]),
-    ]),
-  ],
+    selector: 'app-nav',
+    templateUrl: './nav.component.html',
+    styleUrls: ['./nav.component.scss'],
+    imports: [SvgIconComponent, NavDropComponent, AsyncPipe],
+    animations: [
+        trigger('toggleMenu', [
+            state('open', style({
+                transform: 'translateY(0)',
+            })),
+            state('closed', style({
+                transform: 'translateY(-400px)',
+            })),
+            transition('open <=> closed', [
+                animate('300ms ease-in-out'), // Duración y curva de animación
+            ]),
+        ]),
+    ]
 })
 export class NavComponent implements OnInit {
   @ViewChild('navDropList') navDropList: ElementRef | undefined;

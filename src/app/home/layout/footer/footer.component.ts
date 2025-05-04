@@ -4,14 +4,13 @@ import { ThemeToggleSliderComponent } from './theme-toggle-slider/theme-toggle-s
 import { SvgIconComponent } from '../../components/svg-icon/svg-icon.component';
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss'],
-  standalone: true,
-  imports: [
-    LangSelectorComponent,
-    ThemeToggleSliderComponent,
-    SvgIconComponent,
-  ],
+    selector: 'app-footer',
+    templateUrl: './footer.component.html',
+    styleUrls: ['./footer.component.scss'],
+    imports: [
+        LangSelectorComponent,
+        ThemeToggleSliderComponent,
+        SvgIconComponent,
+    ]
 })
 export class FooterComponent {}

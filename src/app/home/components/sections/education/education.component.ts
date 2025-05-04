@@ -3,12 +3,11 @@ import { fadeInLeft } from 'src/app/assets/animations/animations';
 import { ScrollSpyDirective } from 'src/app/core/directives/ScrollSpy.directive';
 
 @Component({
-  selector: 'app-education',
-  templateUrl: './education.component.html',
-  styleUrls: ['./education.component.scss'],
-  standalone: true,
-  animations: [fadeInLeft],
-  imports: [ScrollSpyDirective],
+    selector: 'app-education',
+    templateUrl: './education.component.html',
+    styleUrls: ['./education.component.scss'],
+    animations: [fadeInLeft],
+    imports: [ScrollSpyDirective]
 })
 export class EducationComponent {
   titles: TitleItem[] = [

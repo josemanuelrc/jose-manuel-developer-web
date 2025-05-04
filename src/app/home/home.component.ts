@@ -14,23 +14,22 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { ToTopBtnComponent } from './layout/to-top-btn/to-top-btn.component';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
-  standalone: true,
-  imports: [
-    NgClass,
-    HeaderComponent,
-    TitleComponent,
-    AboutMeComponent,
-    ExperienceComponent,
-    TechnologiesComponent,
-    EducationComponent,
-    CurriculumComponent,
-    ContactComponent,
-    FooterComponent,
-    ToTopBtnComponent,
-  ],
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss'],
+    imports: [
+        NgClass,
+        HeaderComponent,
+        TitleComponent,
+        AboutMeComponent,
+        ExperienceComponent,
+        TechnologiesComponent,
+        EducationComponent,
+        CurriculumComponent,
+        ContactComponent,
+        FooterComponent,
+        ToTopBtnComponent,
+    ]
 })
 export class HomeComponent implements OnDestroy {
   private themeService = inject(ThemeService);
