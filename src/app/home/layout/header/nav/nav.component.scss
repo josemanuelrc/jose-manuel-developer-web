@@ -49,12 +49,10 @@ ul.nav-bar-list {
 
     &.active,
     &:hover {
-      background-color: $white;
-      color: $black;
+      background-color: $grey-11;
 
       a {
         font-weight: bold;
-        color: $black;
       }
     }
   }

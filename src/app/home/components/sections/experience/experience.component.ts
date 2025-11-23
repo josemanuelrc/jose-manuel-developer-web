@@ -1,3 +1,4 @@
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { fadeInLeft } from 'src/app/assets/animations/animations';
 import { ScrollSpyDirective } from 'src/app/core/directives/ScrollSpy.directive';
@@ -7,7 +8,7 @@ import { ScrollSpyDirective } from 'src/app/core/directives/ScrollSpy.directive'
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss'],
   animations: [fadeInLeft],
-  imports: [ScrollSpyDirective],
+  imports: [ScrollSpyDirective, NgClass],
 })
 export class ExperienceComponent {
   experiences: Experience[] = [
@@ -33,6 +34,7 @@ export class ExperienceComponent {
         'Git',
         'GitLab',
       ],
+      expanded: false,
     },
     {
       title: 'Desarrollador Backend',
@@ -56,6 +58,7 @@ export class ExperienceComponent {
         'Git',
         'GitHub',
       ],
+      expanded: false,
     },
     {
       title: 'Desarrollador Web Full-Stack',
@@ -88,6 +91,7 @@ export class ExperienceComponent {
         'Git',
         'GitLab',
       ],
+      expanded: false,
     },
     {
       title: 'Desarrollador Web Full-Stack',
@@ -121,6 +125,7 @@ export class ExperienceComponent {
         'Git',
         'GitLab',
       ],
+      expanded: false,
     },
     {
       title: 'Programador Junior',
@@ -131,6 +136,7 @@ export class ExperienceComponent {
         '• Participación en mantenimiento evolutivo y correctivo del sistema existente.',
       ],
       technologies: ['C#', '.NET Core', '.NET Framework', 'SQL', 'SQLServer'],
+      expanded: false,
     },
     {
       title: 'Desarrollador Web Full-Stack',
@@ -155,8 +161,22 @@ export class ExperienceComponent {
         'Hibernate',
         'PostgreSQL',
       ],
+      expanded: false,
     },
   ];
+
+  showAll = false;
+  initialVisibleCount = 3;
+
+  visibleExperiences() {
+    return this.showAll
+      ? this.experiences
+      : this.experiences.slice(0, this.initialVisibleCount);
+  }
+
+  toggleShowAll() {
+    this.showAll = !this.showAll;
+  }
 }
 
 interface Experience {
@@ -165,4 +185,5 @@ interface Experience {
   period: string;
   description: string[];
   technologies?: string[];
+  expanded: boolean;
 }

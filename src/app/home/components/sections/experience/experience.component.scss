@@ -5,6 +5,12 @@ section#experience {
   background: rgba($black, 0.8);
 }
 
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .description {
   padding-left: 2rem;
 }

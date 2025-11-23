@@ -9,21 +9,33 @@
     <hr />
     <div class="box-main-content">
       <ul>
-        @for(experience of experiences; track $index) {
-
+        @for(experience of visibleExperiences(); track $index) {
         <li class="timeline-item">
-          <h4 class="timeline-item-title">{{ experience.title }}</h4>
-          <h5>{{ experience.period }} | {{ experience.company }}</h5>
+          <div class="experience-header">
+            <h4 class="timeline-item-title">{{ experience.title }}</h4>
+            <h5>{{ experience.period }}</h5>
+          </div>
+          <h5>{{ experience.company }}</h5>
+
           @defer(on viewport) {
           <div class="description" [@fadeInLeft]>
-            @for( parragraf of experience.description; track $index){
-            <p>{{ parragraf }}</p>
-            }
-            <!-- TECH CHIPS -->
-            @for(tech of experience.technologies; track $index) {
-            <span class="tech-chip">
-              {{ tech }}
-            </span>
+            @for(paragraph of (experience.expanded ? experience.description :
+            experience.description.slice(0, 2)); track $index) {
+            <p>{{ paragraph }}</p>
+            } @if(experience.description.length > 2) {
+            <button
+              (click)="experience.expanded = !experience.expanded"
+              class="btn"
+            >
+              {{ experience.expanded ? "Ver menos" : "Ver más" }}
+              <i
+                [ngClass]="
+                  experience.expanded ? 'icon-chevron-up' : 'icon-chevron-down'
+                "
+              ></i>
+            </button>
+            } @for(tech of experience.technologies; track $index) {
+            <span class="tech-chip">{{ tech }}</span>
             }
           </div>
           } @placeholder {
@@ -32,6 +44,16 @@
         </li>
         }
       </ul>
+
+      <!-- Botón para ver más experiencias -->
+      @if(experiences.length > initialVisibleCount) {
+      <div class="text-center mt-4">
+        <button class="btn" (click)="toggleShowAll()">
+          {{ showAll ? "Ver menos" : "Ver más" }}
+          <i [ngClass]="showAll ? 'icon-chevron-up' : 'icon-chevron-down'"></i>
+        </button>
+      </div>
+      }
     </div>
   </article>
 </section>

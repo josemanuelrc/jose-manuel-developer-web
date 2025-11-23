@@ -114,6 +114,11 @@ hr {
   margin-bottom: 2.5rem;
 }
 
+img {
+  &::selection {
+    background: $grey-08;
+  }
+}
 @media (max-width: $tablet-breakpoint) {
   h1 {
     font-size: 3rem;
