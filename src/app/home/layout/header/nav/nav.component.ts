@@ -71,7 +71,7 @@ export class NavComponent implements OnInit {
     }
   }
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize')
   onResizeEvent() {
     this.onResize(); // Llama a la función de verificación de tamaño
   }
