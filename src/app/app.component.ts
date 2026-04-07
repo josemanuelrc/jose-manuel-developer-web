@@ -5,7 +5,7 @@ import { CustomCursorComponent } from './home/components/custom-cursor/custom-cu
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  imports: [RouterOutlet, CustomCursorComponent],
+  imports: [RouterOutlet],
 })
 export class AppComponent {
   title = 'Jose Manuel Rodríguez Camacho - Web Developer';

@@ -10,16 +10,16 @@
     <!-- NAVIGATION BAR LIST -->
     <ul class="nav-bar-list">
       @for (item of navItems; track item.href) {
-      <li
-        [class.active]="
-          item.href === '#' + (this.scrollSpy.activeSection$ | async)
-        "
-      >
-        <a [href]="item.href">
-          <app-svg-icon [svgName]="item.icon" />
-          {{ item.label }}
-        </a>
-      </li>
+        <li
+          [class.active]="
+            item.href === '#' + (this.scrollSpy.activeSection$ | async)
+          "
+        >
+          <a [href]="item.href">
+            <app-svg-icon [svgName]="item.icon" />
+            {{ item.label }}
+          </a>
+        </li>
       }
     </ul>
 
@@ -29,10 +29,10 @@
       aria-label="Menu Button"
       (click)="toggleMenu($event)"
     >
-      @if(isMenuOpen) {
-      <app-svg-icon [svgName]="'close'" />
+      @if (isMenuOpen) {
+        <app-svg-icon [svgName]="'close'" />
       } @else {
-      <app-svg-icon [svgName]="'menu'" />
+        <app-svg-icon [svgName]="'menu'" />
       }
     </button>
   </div>
