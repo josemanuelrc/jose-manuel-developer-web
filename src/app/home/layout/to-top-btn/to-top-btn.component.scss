@@ -1,5 +1,5 @@
-@use "./../../../assets/themes/themes.scss" as *;
-@use "./../../../assets/themes/breakpoints.scss" as *;
+@use "@assets/themes/themes.scss" as *;
+@use "@assets/themes/breakpoints.scss" as *;
 
 .to-top-btn {
   position: fixed;
@@ -11,7 +11,10 @@
   background-color: $white;
   border: none;
   border-radius: 50%;
-  transition: transform 0.2s ease-in-out, bottom 0.2s ease, right 0.2s ease;
+  transition:
+    transform 0.2s ease-in-out,
+    bottom 0.2s ease,
+    right 0.2s ease;
   &:hover {
     transform: scale(1.1);
   }

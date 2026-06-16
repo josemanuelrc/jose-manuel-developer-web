@@ -1,6 +1,11 @@
-import { Component, OnDestroy, inject, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  OnDestroy,
+  inject,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Theme } from 'src/app/assets/themes/theme.interface';
+import { Theme } from 'src/assets/themes/theme.interface';
 import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({

@@ -32,7 +32,10 @@
             ],
             "styles": ["src/styles.scss", "src/app/assets/fonts/fonts.scss"],
             "scripts": [],
-            "browser": "src/main.ts"
+            "browser": "src/main.ts",
+            "stylePreprocessorOptions": {
+              "includePaths": ["src"]
+            }
           },
           "configurations": {
             "production": {
@@ -60,17 +63,9 @@
               "aot": false,
               "optimization": false,
               "extractLicenses": false,
-              "assets": [
-                "src/favicon.ico",
-                "src/assets"
-              ],
-              "styles": [
-                "src/styles.scss"
-              ],
-              "polyfills": [
-                "zone.js",
-                "zone.js/testing"
-              ]
+              "assets": ["src/favicon.ico", "src/assets"],
+              "styles": ["src/styles.scss"],
+              "polyfills": ["zone.js", "zone.js/testing"]
             }
           },
           "defaultConfiguration": "production"

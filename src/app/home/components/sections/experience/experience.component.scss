@@ -1,5 +1,5 @@
-@use "src/app/assets/themes/themes.scss" as *;
-@use "src/app/assets/themes/breakpoints.scss" as *;
+@use "@assets/themes/themes.scss" as *;
+@use "@assets/themes/breakpoints.scss" as *;
 
 section#experience {
   background: rgba($black, 0.8);
@@ -26,7 +26,9 @@ section#experience {
   font-weight: bold;
   text-align: center;
   border: 1px solid transparent;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 @media (max-width: $mobile-breakpoint) {

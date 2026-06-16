@@ -1,5 +1,5 @@
-@use "src/app/assets/themes/themes.scss" as *;
-@use "src/app/assets/themes/breakpoints.scss" as *;
+@use "@assets/themes/themes.scss" as *;
+@use "@assets/themes/breakpoints.scss" as *;
 
 nav {
   position: relative;
@@ -36,7 +36,9 @@ ul.nav-bar-list {
     display: flex;
     align-items: center;
     height: 100%;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition:
+      background-color 0.2s ease-in-out,
+      color 0.2s ease-in-out;
 
     a {
       display: flex;

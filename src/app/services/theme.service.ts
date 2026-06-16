@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Theme } from '../assets/themes/theme.interface';
+import { Theme } from '../../assets/themes/theme.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ThemeService {
   private themeSubject: BehaviorSubject<string>;
@@ -27,5 +27,4 @@ export class ThemeService {
   public getTheme$(): Observable<string> {
     return this.theme$;
   }
-
 }
