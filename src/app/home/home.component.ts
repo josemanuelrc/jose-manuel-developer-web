@@ -1,4 +1,4 @@
-import { Component, OnDestroy, inject } from '@angular/core';
+import { Component, OnDestroy, inject, ChangeDetectionStrategy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ThemeService } from '../services/theme.service';
 import { NgClass } from '@angular/common';
@@ -17,6 +17,7 @@ import { ToTopBtnComponent } from './layout/to-top-btn/to-top-btn.component';
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         NgClass,
         HeaderComponent,

@@ -5,6 +5,7 @@ import {
   OnInit,
   HostListener,
   inject,
+  ChangeDetectionStrategy
 } from '@angular/core';
 import { SvgIconComponent } from 'src/app/home/components/svg-icon/svg-icon.component';
 import { NavDropComponent } from './nav-drop/nav-drop.component';
@@ -23,6 +24,7 @@ import { AsyncPipe } from '@angular/common';
     templateUrl: './nav.component.html',
     styleUrls: ['./nav.component.scss'],
     imports: [SvgIconComponent, NavDropComponent, AsyncPipe],
+    changeDetection: ChangeDetectionStrategy.Eager,
     animations: [
         trigger('toggleMenu', [
             state('open', style({

@@ -1,10 +1,11 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ChangeDetectionStrategy } from '@angular/core';
 import { SvgIconComponent } from 'src/app/home/components/svg-icon/svg-icon.component';
 
 @Component({
     selector: 'app-nav-drop',
     templateUrl: './nav-drop.component.html',
     styleUrls: ['./nav-drop.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [SvgIconComponent]
 })
 export class NavDropComponent {

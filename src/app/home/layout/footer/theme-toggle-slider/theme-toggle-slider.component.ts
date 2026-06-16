@@ -1,4 +1,4 @@
-import { Component, OnDestroy, inject } from '@angular/core';
+import { Component, OnDestroy, inject, ChangeDetectionStrategy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Theme } from 'src/app/assets/themes/theme.interface';
 import { ThemeService } from 'src/app/services/theme.service';
@@ -7,6 +7,7 @@ import { ThemeService } from 'src/app/services/theme.service';
   selector: 'app-theme-toggle-slider',
   templateUrl: './theme-toggle-slider.component.html',
   styleUrls: ['./theme-toggle-slider.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: true,
 })
 export class ThemeToggleSliderComponent implements OnDestroy {

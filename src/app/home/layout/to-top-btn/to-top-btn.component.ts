@@ -1,10 +1,11 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { SvgIconComponent } from '../../components/svg-icon/svg-icon.component';
 
 @Component({
   selector: 'app-to-top-btn',
   templateUrl: './to-top-btn.component.html',
   styleUrls: ['./to-top-btn.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SvgIconComponent],
 })
 export class ToTopBtnComponent {
