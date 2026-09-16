@@ -52,10 +52,6 @@ ul.nav-bar-list {
     &.active,
     &:hover {
       background-color: $grey-11;
-
-      a {
-        font-weight: bold;
-      }
     }
   }
 }
