@@ -1,13 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ScrollSpyDirective } from 'src/app/core/directives/ScrollSpy.directive';
-import { EmailService } from 'src/app/services/email.service';
+import { ScrollSpyDirective } from '@app/core/directives/ScrollSpy.directive';
+import { EmailService } from '@app/services/email.service';
 
 @Component({
-    selector: 'app-contact',
-    templateUrl: './contact.component.html',
-    styleUrls: ['./contact.component.scss'],
-    imports: [ReactiveFormsModule, ScrollSpyDirective]
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.scss'],
+  imports: [ReactiveFormsModule, ScrollSpyDirective],
 })
 export class ContactComponent {
   private emailService = inject(EmailService);

@@ -5,8 +5,8 @@ import {
   ChangeDetectionStrategy,
 } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Theme } from 'src/assets/themes/theme.interface';
-import { ThemeService } from 'src/app/services/theme.service';
+import { Theme } from '@assets/themes/theme.interface';
+import { ThemeService } from '@app/services/theme.service';
 
 @Component({
   selector: 'app-theme-toggle-slider',

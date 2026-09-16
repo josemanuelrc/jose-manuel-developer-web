@@ -5,9 +5,9 @@ import {
   OnInit,
   HostListener,
   inject,
-  ChangeDetectionStrategy
+  ChangeDetectionStrategy,
 } from '@angular/core';
-import { SvgIconComponent } from 'src/app/home/components/svg-icon/svg-icon.component';
+import { SvgIconComponent } from '@app/home/components/svg-icon/svg-icon.component';
 import { NavDropComponent } from './nav-drop/nav-drop.component';
 import {
   trigger,
@@ -16,28 +16,34 @@ import {
   animate,
   transition,
 } from '@angular/animations';
-import { ScrollSpyService } from 'src/app/core/services/scrollSpy.service';
+import { ScrollSpyService } from '@app/core/services/scrollSpy.service';
 import { AsyncPipe } from '@angular/common';
 
 @Component({
-    selector: 'app-nav',
-    templateUrl: './nav.component.html',
-    styleUrls: ['./nav.component.scss'],
-    imports: [SvgIconComponent, NavDropComponent, AsyncPipe],
-    changeDetection: ChangeDetectionStrategy.Eager,
-    animations: [
-        trigger('toggleMenu', [
-            state('open', style({
-                transform: 'translateY(0)',
-            })),
-            state('closed', style({
-                transform: 'translateY(-400px)',
-            })),
-            transition('open <=> closed', [
-                animate('300ms ease-in-out'), // Duración y curva de animación
-            ]),
-        ]),
-    ]
+  selector: 'app-nav',
+  templateUrl: './nav.component.html',
+  styleUrls: ['./nav.component.scss'],
+  imports: [SvgIconComponent, NavDropComponent, AsyncPipe],
+  changeDetection: ChangeDetectionStrategy.Eager,
+  animations: [
+    trigger('toggleMenu', [
+      state(
+        'open',
+        style({
+          transform: 'translateY(0)',
+        }),
+      ),
+      state(
+        'closed',
+        style({
+          transform: 'translateY(-400px)',
+        }),
+      ),
+      transition('open <=> closed', [
+        animate('300ms ease-in-out'), // Duración y curva de animación
+      ]),
+    ]),
+  ],
 })
 export class NavComponent implements OnInit {
   @ViewChild('navDropList') navDropList: ElementRef | undefined;

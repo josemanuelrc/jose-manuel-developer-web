@@ -1,7 +1,7 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
-import { fadeInLeft } from 'src/app/assets/animations/animations';
-import { ScrollSpyDirective } from 'src/app/core/directives/ScrollSpy.directive';
+import { fadeInLeft } from '@app/assets/animations/animations';
+import { ScrollSpyDirective } from '@app/core/directives/ScrollSpy.directive';
 
 @Component({
   selector: 'app-experience',
