@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, signal } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
@@ -9,11 +9,15 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   standalone: true,
 })
 export class SvgIconComponent implements OnInit {
-  @Input() svgName!: string; // Nombre del archivo SVG
-  @Input() svgColor = 'currentColor'; // Color por defecto
-  svgContent: SafeHtml = '';
+  @Input() svgName!: string;
+  @Input() svgColor = 'black';
 
-  constructor(private http: HttpClient, private sanitizer: DomSanitizer) {}
+  svgContent = signal<SafeHtml>('');
+
+  constructor(
+    private http: HttpClient,
+    private sanitizer: DomSanitizer,
+  ) {}
 
   ngOnInit(): void {
     this.loadSvg();
@@ -21,14 +25,14 @@ export class SvgIconComponent implements OnInit {
 
   private loadSvg(): void {
     const filePath = `assets/svgs/${this.svgName}.svg`;
-    this.http.get(filePath, { responseType: 'text' }).subscribe(
-      (svgData) => {
-        // Sanitizamos el SVG para evitar problemas de seguridad
-        this.svgContent = this.sanitizer.bypassSecurityTrustHtml(svgData);
+
+    this.http.get(filePath, { responseType: 'text' }).subscribe({
+      next: (svgData) => {
+        this.svgContent.set(this.sanitizer.bypassSecurityTrustHtml(svgData));
       },
-      (error) => {
+      error: (error) => {
         console.error(`Error al cargar el SVG: ${filePath}`, error);
-      }
-    );
+      },
+    });
   }
 }
