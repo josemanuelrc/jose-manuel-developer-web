@@ -46,6 +46,10 @@ p {
   }
 }
 
+#link {
+  display: none;
+}
+
 @media (max-width: $tablet-breakpoint) {
   p {
     font-size: 0.9rem;
