@@ -27,6 +27,11 @@ section#curriculum {
       margin-top: 1rem;
     }
   }
+
+  #link {
+    display: none;
+  }
+
   @media (max-width: $laptop-breakpoint) {
     flex-direction: column;
     img {
@@ -43,8 +48,4 @@ section#curriculum {
       max-width: 100%;
     }
   }
-}
-
-#link {
-  display: none;
 }

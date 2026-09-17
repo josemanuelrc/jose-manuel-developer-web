@@ -34,6 +34,16 @@
         </a>
       </div>
       <button class="btn" (click)="downloadFile()">Descargar CV</button>
+      <!-- Enlace oculto para descargar el CV -->
+      <a
+        #link
+        id="link"
+        href="assets/documents/curriculum.pdf"
+        download="curriculum.pdf"
+        name="Descargar Currículum"
+      >
+        Link -OCULTO-
+      </a>
     </div>
   </div>
 </section>
