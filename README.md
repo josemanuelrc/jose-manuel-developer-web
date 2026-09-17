@@ -111,4 +111,4 @@ Si tienes alguna pregunta o deseas ponerte en contacto conmigo, no dudes en envi
 - Correo: josemanuel0709@hotmail.es
 - LinkedIn: José Manuel Rodríguez Camacho
 - GitHub: @josemanuelrc
-  © 2024 José Manuel Rodríguez Camacho - Todos los derechos reservados
+  © 2026 José Manuel Rodríguez Camacho - Todos los derechos reservados
