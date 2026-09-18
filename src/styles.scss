@@ -2,7 +2,6 @@
 @use "@assets/themes/themes.scss" as *;
 @use "@assets/themes/breakpoints.scss" as *;
 @use "./assets/styles/responsive-boxes.scss" as *;
-@use "./assets/styles/timeline.scss" as *;
 @use "./assets/styles/btn.scss" as *;
 
 html {
@@ -10,6 +9,7 @@ html {
 }
 
 body {
+  font-family: sans-serif;
 }
 
 /* Estilos para títulos comunes */

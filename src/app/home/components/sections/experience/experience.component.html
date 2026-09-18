@@ -8,51 +8,57 @@
     <h3>Experiencia</h3>
     <hr />
     <div class="box-main-content">
-      <ul>
-        @for(experience of visibleExperiences(); track $index) {
-        <li class="timeline-item">
-          <div class="experience-header">
-            <h4 class="timeline-item-title">{{ experience.title }}</h4>
-            <h5>{{ experience.period }}</h5>
-          </div>
-          <h5>{{ experience.company }}</h5>
+      <ul class="timeline">
+        @for (experience of visibleExperiences(); track $index) {
+          <li class="timeline-card">
+            <div class="card-header">
+              <h4>{{ experience.title }}</h4>
+              <h5>{{ experience.period }}</h5>
+            </div>
+            <h5>{{ experience.company }}</h5>
 
-          @defer(on viewport) {
-          <div class="description" [@fadeInLeft]>
-            @for(paragraph of (experience.expanded ? experience.description :
-            experience.description.slice(0, 2)); track $index) {
-            <p>{{ paragraph }}</p>
-            } @if(experience.description.length > 2) {
-            <button
-              (click)="experience.expanded = !experience.expanded"
-              class="btn"
-            >
-              {{ experience.expanded ? "Ver menos" : "Ver más" }}
-              <i
-                [ngClass]="
-                  experience.expanded ? 'icon-chevron-up' : 'icon-chevron-down'
-                "
-              ></i>
-            </button>
-            } @for(tech of experience.technologies; track $index) {
-            <span class="tech-chip">{{ tech }}</span>
+            @defer (on viewport) {
+              <div class="card-description" [@fadeInLeft]>
+                @for (
+                  paragraph of experience.expanded
+                    ? experience.description
+                    : experience.description.slice(0, 2);
+                  track $index
+                ) {
+                  <p>{{ paragraph }}</p>
+                }
+
+                <div class="card-footer">
+                  <div class="tech-chips">
+                    @for (tech of experience.technologies; track $index) {
+                      <span class="tech-chip">{{ tech }}</span>
+                    }
+                  </div>
+
+                  @if (experience.description.length > 2) {
+                    <button
+                      (click)="experience.expanded = !experience.expanded"
+                      class="btn"
+                    >
+                      {{ experience.expanded ? "Ver menos" : "Ver más" }}
+                    </button>
+                  }
+                </div>
+              </div>
+            } @placeholder {
+              <span></span>
             }
-          </div>
-          } @placeholder {
-          <span></span>
-          }
-        </li>
+          </li>
         }
       </ul>
 
-      <!-- Botón para ver más experiencias -->
-      @if(experiences.length > initialVisibleCount) {
-      <div class="text-center mt-4">
-        <button class="btn" (click)="toggleShowAll()">
-          {{ showAll ? "Ver menos" : "Ver más" }}
-          <i [ngClass]="showAll ? 'icon-chevron-up' : 'icon-chevron-down'"></i>
-        </button>
-      </div>
+      <!-- Botón para expandir listado de experiencias -->
+      @if (experiences.length > initialVisibleCount) {
+        <div class="expand-experience">
+          <button class="btn" (click)="toggleShowAll()">
+            {{ showAll ? "Ver menos" : "Ver más" }}
+          </button>
+        </div>
       }
     </div>
   </article>
