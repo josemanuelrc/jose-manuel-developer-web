@@ -10,7 +10,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 })
 export class SvgIconComponent implements OnInit {
   @Input() svgName!: string;
-  @Input() svgColor = 'black';
+  @Input() svgColor = '';
 
   svgContent = signal<SafeHtml>('');
 
