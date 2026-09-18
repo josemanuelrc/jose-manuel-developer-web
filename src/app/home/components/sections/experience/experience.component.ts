@@ -12,9 +12,30 @@ import { ScrollSpyDirective } from '@app/core/directives/ScrollSpy.directive';
 export class ExperienceComponent {
   experiences: Experience[] = [
     {
-      title: 'Desarrollador FrontEnd',
+      title: 'Desarrollador Web Backend',
+      company: 'NTT Data',
+      period: '2025 - Actualidad',
+      description: [
+        '• Análisis, diseño y desarrollo de procesos batch para la migración e historificación de datos de usuarios (ex-clientes).',
+        '• Análisis, definición y desarrollo de micro-servicios para la integración (proxies app-to-app) con sistemas de procesado de ficheros basados en AI (Cortex).',
+      ],
+      technologies: [
+        'Java',
+        'Spring',
+        'SpringBoot',
+        'Microservicios',
+        'Swagger',
+        'JPA/Hibernate',
+        'MySQL',
+        'Git',
+        'GitHub',
+      ],
+      expanded: false,
+    },
+    {
+      title: 'Desarrollador WebFrontEnd',
       company: 'Centro de Observación y Teledetección Espacial (COTESA)',
-      period: '2024 - Actualidad',
+      period: '2024 - 2025',
       description: [
         '• Diseño y desarrollo de nueva versión del Sistema de Información de la Red de Carreteras de Andalucía (CONSICA).',
         '• Coordinación de tareas y liderazgo técnico en el equipo de FrontEnd',
