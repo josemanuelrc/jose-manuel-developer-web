@@ -10,6 +10,35 @@ section#education {
   }
 }
 
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  .timeline-card {
+    background: $grey-12;
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-description {
+      padding-left: 2rem;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
 .description {
   padding-left: 2rem;
 }

@@ -9,50 +9,52 @@
     <hr />
     <div class="box-main-content education-container">
       <h4>Títulos Académicos</h4>
-      <ul>
-        @for(title of titles; track $index) {
-        <li class="timeline-item">
-          <h4 class="timeline-item-title">{{ title.title }}</h4>
-          <h5 class="timeline-item-period">
-            {{ title.period }} | {{ title.institution }}
-          </h5>
-          @defer(on viewport) {
-          <div class="description" [@fadeInLeft]>
-            <p>{{ title.description }}</p>
-          </div>
-          } @placeholder {<span></span>}
-        </li>
+      <ul class="timeline">
+        @for (title of titles; track $index) {
+          <li class="timeline-card">
+            <h4 class="card-header">{{ title.title }}</h4>
+            <h5>{{ title.period }} | {{ title.institution }}</h5>
+            @defer (on viewport) {
+              <div class="card-description">
+                <p>{{ title.description }}</p>
+              </div>
+            } @placeholder {
+              <span></span>
+            }
+          </li>
         }
       </ul>
 
       <h4>Cursos y Certificaciones</h4>
-      <ul>
-        @for(course of courses; track $index) {
-        <li class="timeline-item">
-          <h4 class="timeline-item-title">{{ course.title }}</h4>
-          <h5 class="timeline-item-period">
-            {{ course.period }} | {{ course.institution }}
-          </h5>
-          @defer(on viewport) {
-          <div class="description" [@fadeInLeft]>
-            <p>{{ course.description }}</p>
-          </div>
-          } @placeholder {<span></span>}
-        </li>
+      <ul class="timeline">
+        @for (course of courses; track $index) {
+          <li class="timeline-card">
+            <h4 class="card-header">{{ course.title }}</h4>
+            <h5>{{ course.period }} | {{ course.institution }}</h5>
+            @defer (on viewport) {
+              <div class="card-description" [@fadeInLeft]>
+                <p>{{ course.description }}</p>
+              </div>
+            } @placeholder {
+              <span></span>
+            }
+          </li>
         }
       </ul>
       <h4>Idiomas</h4>
-      <ul>
-        @for(language of languages; track $index) {
-        <li class="timeline-item">
-          <h4 class="timeline-item-title">{{ language.name }}</h4>
-          <h5 class="timeline-item-level">Nivel: {{ language.level }}</h5>
-          @defer(on viewport) {
-          <div class="description" [@fadeInLeft]>
-            <p>{{ language.description }}</p>
-          </div>
-          } @placeholder {<span></span>}
-        </li>
+      <ul class="timeline">
+        @for (language of languages; track $index) {
+          <li class="timeline-card">
+            <h4 class="card-header">{{ language.name }}</h4>
+            <h5>Nivel: {{ language.level }}</h5>
+            @defer (on viewport) {
+              <div class="card-description" [@fadeInLeft]>
+                <p>{{ language.description }}</p>
+              </div>
+            } @placeholder {
+              <span></span>
+            }
+          </li>
         }
       </ul>
     </div>

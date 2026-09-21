@@ -9,47 +9,47 @@ section#experience {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+
   .timeline-card {
     background: $grey-12;
     padding: 1rem;
     border-radius: 0.5rem;
-  }
-}
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    .card-description {
+      padding-left: 2rem;
+    }
 
-.card-description {
-  padding-left: 2rem;
-}
-
-.card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 0.5rem;
-  .tech-chips {
-    .tech-chip {
-      display: inline-block;
-      padding: 0.3em 0.8em;
-      margin: 0.25rem;
-      color: $grey-01;
-      background-color: $grey-11;
-      border-radius: 1rem;
-      font-size: 0.75rem;
-      font-weight: bold;
-      text-align: center;
-      border: 1px solid transparent;
-      transition:
-        background-color 0.3s ease,
-        border-color 0.3s ease;
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.5rem;
     }
   }
 }
 
+.tech-chips {
+  .tech-chip {
+    display: inline-block;
+    padding: 0.3em 0.8em;
+    margin: 0.25rem;
+    color: $grey-01;
+    background-color: $grey-11;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid transparent;
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease;
+  }
+}
 .expand-experience {
   margin-top: 1rem;
   display: flex;
