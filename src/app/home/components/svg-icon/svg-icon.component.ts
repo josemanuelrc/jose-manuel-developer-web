@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit, signal } from '@angular/core';
+import { Component, inject, Input, OnInit, signal } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
@@ -14,10 +14,8 @@ export class SvgIconComponent implements OnInit {
 
   svgContent = signal<SafeHtml>('');
 
-  constructor(
-    private http: HttpClient,
-    private sanitizer: DomSanitizer,
-  ) {}
+  private http = inject(HttpClient);
+  private sanitizer = inject(DomSanitizer);
 
   ngOnInit(): void {
     this.loadSvg();
