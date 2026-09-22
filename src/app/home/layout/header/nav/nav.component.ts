@@ -5,17 +5,10 @@ import {
   OnInit,
   HostListener,
   inject,
-  ChangeDetectionStrategy,
 } from '@angular/core';
 import { SvgIconComponent } from '@app/home/components/svg-icon/svg-icon.component';
 import { NavDropComponent } from './nav-drop/nav-drop.component';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-} from '@angular/animations';
+
 import { ScrollSpyService } from '@app/core/services/scrollSpy.service';
 import { AsyncPipe } from '@angular/common';
 
@@ -24,26 +17,6 @@ import { AsyncPipe } from '@angular/common';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
   imports: [SvgIconComponent, NavDropComponent, AsyncPipe],
-  changeDetection: ChangeDetectionStrategy.Eager,
-  animations: [
-    trigger('toggleMenu', [
-      state(
-        'open',
-        style({
-          transform: 'translateY(0)',
-        }),
-      ),
-      state(
-        'closed',
-        style({
-          transform: 'translateY(-400px)',
-        }),
-      ),
-      transition('open <=> closed', [
-        animate('300ms ease-in-out'), // Duración y curva de animación
-      ]),
-    ]),
-  ],
 })
 export class NavComponent implements OnInit {
   @ViewChild('navDropList') navDropList: ElementRef | undefined;

@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { fadeInLeft } from '@app/assets/animations/animations';
 import { ScrollSpyDirective } from '@app/core/directives/ScrollSpy.directive';
 
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.scss'],
-  animations: [fadeInLeft],
   imports: [ScrollSpyDirective],
 })
 export class EducationComponent {

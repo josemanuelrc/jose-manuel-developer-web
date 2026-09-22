@@ -3,15 +3,11 @@ import { AppRoutingModule } from './app/app-routing.module';
 import { AppComponent } from './app/app.component';
 import { importProvidersFrom, provideZoneChangeDetection } from '@angular/core';
 import { provideHttpClient, withFetch } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 bootstrapApplication(AppComponent, {
   providers: [
-    provideZoneChangeDetection(),importProvidersFrom(
-      BrowserModule,
-      BrowserAnimationsModule,
-      AppRoutingModule
-    ),
+    provideZoneChangeDetection(),
+    importProvidersFrom(BrowserModule, AppRoutingModule),
     provideHttpClient(withFetch()),
   ],
 }).catch((err) => console.error(err));

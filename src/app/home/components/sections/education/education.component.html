@@ -32,7 +32,7 @@
             <h4 class="card-header">{{ course.title }}</h4>
             <h5>{{ course.period }} | {{ course.institution }}</h5>
             @defer (on viewport) {
-              <div class="card-description" [@fadeInLeft]>
+              <div class="card-description">
                 <p>{{ course.description }}</p>
               </div>
             } @placeholder {
@@ -48,7 +48,7 @@
             <h4 class="card-header">{{ language.name }}</h4>
             <h5>Nivel: {{ language.level }}</h5>
             @defer (on viewport) {
-              <div class="card-description" [@fadeInLeft]>
+              <div class="card-description">
                 <p>{{ language.description }}</p>
               </div>
             } @placeholder {

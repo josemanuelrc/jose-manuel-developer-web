@@ -38,6 +38,6 @@
   </div>
 </nav>
 <!-- NAV DROP LIST -->
-<div [@toggleMenu]="isMenuOpen ? 'open' : 'closed'">
+<div class="nav-drop-container" [class.open]="isMenuOpen">
   <app-nav-drop [(isMenuOpen)]="isMenuOpen"></app-nav-drop>
 </div>
